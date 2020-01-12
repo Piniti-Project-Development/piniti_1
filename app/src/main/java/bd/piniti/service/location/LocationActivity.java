@@ -48,10 +48,6 @@ public class LocationActivity extends AppCompatActivity {
     private EditText searchText;
     private DatabaseReference databaseUser;
 
-
-    // svfgtdffgb
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
