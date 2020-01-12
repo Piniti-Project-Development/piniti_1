@@ -53,20 +53,9 @@ import fragment.ProfileFragment;
 
 public class HomePageActivity extends AppCompatActivity {
 
-    private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
-    Context context = this;
-    Button fetch;
-    TextView user_location;
-    private FusedLocationProviderClient mFusedLocationClient;
-
-
-    FrameLayout frameLayout;
-
     LinearLayout linear, city_linear;
     TextView title, city;
-    private ImageView search;
-    boolean gps_enabled = false;
-    boolean network_enabled = false;
+    private ImageView search, locationOn, locationOff;
     private double latitude, logitude;
     // Declare Database for data fields
     private DatabaseReference databaseUser;
@@ -133,6 +122,8 @@ public class HomePageActivity extends AppCompatActivity {
         // Button Actions for go location page and search
         linear = findViewById(R.id.linear);
         search = findViewById(R.id.search);
+        locationOn = findViewById(R.id.location_enable);
+        locationOff = findViewById(R.id.location_disable);
 
         // Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
@@ -177,8 +168,9 @@ public class HomePageActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                        locationOff.setVisibility(View.VISIBLE);
                         String cityname = dataSnapshot.child("last_location").getValue(String.class);
-                        city.setText("Last Location: "+cityname);
+                        city.setText(cityname);
                     }
 
                     @Override
@@ -228,8 +220,9 @@ public class HomePageActivity extends AppCompatActivity {
             String locality = addresses.get(0).getLocality();
             String subLocality = addresses.get(0).getSubLocality();
             String fetureName = addresses.get(0).getFeatureName();
-            String address = locality + "," + subAdminArea + "," + adminArea;
+            String address = locality + ", " + subAdminArea + ", " + adminArea;
             databaseUser.child("last_location").setValue(address);
+            locationOn.setVisibility(View.VISIBLE);
             city.setText(address);
 
         } catch (IOException e) {
