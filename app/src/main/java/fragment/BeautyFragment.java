@@ -132,14 +132,24 @@ public class BeautyFragment extends Fragment {
         t1.players.add("Hair");
         t1.players.add("Threading");
 
-        Team t2=new Team("Makeup & Hair Styling");
+        Team t2=new Team("Salon for Man");
+        t2.players.add("Hair Style");
+        t2.players.add("Hair Cut");
+        t2.players.add("Hair Color");
         t2.players.add("Regular Waxing");
-        t2.players.add("Facial");
-        t2.players.add("Pedicure & Manicure");
-        t2.players.add("Hair");
-        t2.players.add("Threading");
+        t2.players.add("Beard Trim");
 
-      //  Team t3=new Team("Mehendi Artists");
+        Team t3=new Team("Salon for Women");
+        t3.players.add("Hair Style");
+        t3.players.add("Hair Cut");
+        t3.players.add("Hair Color");
+        t3.players.add("Regular Waxing");
+        t3.players.add("Facial");
+        t3.players.add("Pedicure & Manicure");
+        t3.players.add("Hair");
+        t3.players.add("Threading");
+
+        //  Team t3=new Team("Mehendi Artists");
 //        t3.players.add("Regular Waxing");
 //        t3.players.add("Facial");
 //        t3.players.add("Pedicure & Manicure");
@@ -149,7 +159,7 @@ public class BeautyFragment extends Fragment {
         ArrayList<Team> allTeams=new ArrayList<Team>();
         allTeams.add(t1);
         allTeams.add(t2);
-       // allTeams.add(t3);
+        allTeams.add(t3);
 
         return allTeams;
 
