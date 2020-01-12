@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,8 +33,11 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import bd.piniti.service.R;
 import bd.piniti.service.SearchingActivity;
@@ -47,18 +51,12 @@ public class LocationActivity extends AppCompatActivity {
     private ImageView back, cancle;
     private EditText searchText;
     private DatabaseReference databaseUser;
+    private TextView addHomeText, homeText, setHome, workText, addWorkText,setWork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-
-        // Here get user id in currentFirebaseUser
-        //  Declare firebase user for get user id
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
-        // Set database location
-        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("Locations");
 
         back = findViewById(R.id.back_img);
         searchText = findViewById(R.id.search_text);
@@ -67,6 +65,49 @@ public class LocationActivity extends AppCompatActivity {
         work = findViewById(R.id.work_location);
         chooseOnMap = findViewById(R.id.choose_on_map);
         cardview = findViewById(R.id.cardview);
+
+        addHomeText = findViewById(R.id.add_home_text);
+        homeText = findViewById(R.id.home_text);
+        setHome = findViewById(R.id.set_home_add);
+
+        addWorkText = findViewById(R.id.add_work_text);
+        workText = findViewById(R.id.work_text);
+        setWork = findViewById(R.id.set_work_add);
+
+        // Here get user id in currentFirebaseUser
+        //  Declare firebase user for get user id
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        // Set database location
+        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("Locations");
+        databaseUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                String workString = dataSnapshot.child("work_loc_text").getValue(String.class);
+                String homeString = dataSnapshot.child("home_loc_text").getValue(String.class);
+                if(workString != null){
+                    String workSet = "\n"+workString;
+                    setWork.setText(workSet);
+                    addWorkText.setVisibility(View.INVISIBLE);
+                    workText.setVisibility(View.VISIBLE);
+                    setWork.setVisibility(View.VISIBLE);
+                }
+                if(homeString != null){
+                    String homeSet = "\n"+homeString;
+                    setHome.setText(homeSet);
+                    addHomeText.setVisibility(View.INVISIBLE);
+                    homeText.setVisibility(View.VISIBLE);
+                    setHome.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

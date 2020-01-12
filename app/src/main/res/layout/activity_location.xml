@@ -30,15 +30,39 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
             android:src="@drawable/ic_home3" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Add Home"
-            android:textColor="@color/walkthrough_txt"
-            android:textSize="15sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/add_home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Add Home"
+                android:visibility="visible"
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Home"
+                android:visibility="invisible"
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/set_home_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textSize="13dp"
+                android:visibility="invisible"/>
+        </RelativeLayout>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -57,15 +81,40 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
             android:src="@drawable/ic_work" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Add Work"
-            android:textColor="@color/walkthrough_txt"
-            android:textSize="15sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/add_work_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Add Work"
+                android:visibility="visible"
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/work_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Work"
+                android:visibility="invisible"
+                android:textColor="@color/walkthrough_txt"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/set_work_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textSize="13dp"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
     </LinearLayout>
     <View
         android:layout_width="match_parent"

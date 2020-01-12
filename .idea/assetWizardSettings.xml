@@ -134,7 +134,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_web_asset_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_location_on_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -144,9 +144,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="8f909e" />
-                            <entry key="outputName" value="ic_credit" />
-                            <entry key="sourceFile" value="$APPLICATION_HOME_DIR$/bin/C:\Users\Animash\Dropbox\Piniti Project File\Piniti App Assignment\map_pin.svg" />
+                            <entry key="color" value="499c54" />
+                            <entry key="outputName" value="ic_location_on" />
+                            <entry key="sourceFile" value="C:\Program Files\Android\Android Studio\bin\C:\Users\Animash\Dropbox\Piniti Project File\Piniti App Assignment\map_pin.svg" />
                           </map>
                         </option>
                       </PersistentState>
