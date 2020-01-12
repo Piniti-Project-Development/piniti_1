@@ -26,7 +26,7 @@
             android:layout_weight="1"
             android:background="@color/transperent"
             android:fontFamily="@font/sf_pro_display_regular"
-            android:hint="Enter Location"
+            android:hint="Enter location"
             android:inputType="text"
             android:textColor="#898a8c"
             android:textSize="15sp" />
