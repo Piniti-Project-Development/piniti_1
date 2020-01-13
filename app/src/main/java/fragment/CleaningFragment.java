@@ -26,8 +26,8 @@ public class CleaningFragment extends Fragment {
 
 
     private  Integer image[] = {R.drawable.home_deep_cleaning,R.drawable.kitchen_deep_cleaning,R.drawable.carpet_cleaning,R.drawable.bathroom_cleaning,
-            R.drawable.sofa_cleaning};
-    private String title[] = {"Home Deep Cleaning","Kitchen Deep Cleaning","Carpet Cleaning","Bathroom Cleaning","Sofa Cleaning"};
+            R.drawable.sofa_cleaning,R.drawable.sofa_cleaning};
+    private String title[] = {"Home Deep Cleaning","Kitchen Deep Cleaning","Carpet Cleaning","Bathroom Cleaning","Sofa Cleaning","Sweep & Mop"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

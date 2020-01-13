@@ -19,10 +19,21 @@
             android:orientation="vertical">
 
 
-
-
             <ExpandableListView
                 android:id="@+id/expandblelistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#e2e2e2"
+                android:layout_gravity="start"
+
+                android:childDivider="@color/white"
+                android:groupIndicator="@null"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"
+                android:dividerHeight="0dp"/>
+
+            <ExpandableListView
+                android:id="@+id/expandblelistview2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:divider="#e2e2e2"
@@ -71,7 +82,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_furniture"
                 android:layout_width="match_parent"
@@ -109,7 +126,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_machine"
                 android:layout_width="match_parent"
@@ -147,7 +170,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_engine"
                 android:layout_width="match_parent"
@@ -185,7 +214,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_motorcycle"
                 android:layout_width="match_parent"
@@ -223,7 +258,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_auto"
                 android:layout_width="match_parent"
@@ -261,7 +302,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_water_pump"
                 android:layout_width="match_parent"
@@ -299,7 +346,13 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
             <LinearLayout
                 android:id="@+id/linear_tools"
                 android:layout_width="match_parent"
@@ -337,7 +390,6 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
