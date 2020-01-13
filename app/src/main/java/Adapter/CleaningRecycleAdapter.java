@@ -22,7 +22,7 @@ import bd.piniti.service.R;
 import bd.piniti.service.SofaCleaningOneActivity;
 
 
-public class HomeCleaningRecycleAdapter extends RecyclerView.Adapter<HomeCleaningRecycleAdapter.MyViewHolder> {
+public class CleaningRecycleAdapter extends RecyclerView.Adapter<CleaningRecycleAdapter.MyViewHolder> {
 
     Context context;
 
@@ -51,18 +51,18 @@ public class HomeCleaningRecycleAdapter extends RecyclerView.Adapter<HomeCleanin
     }
 
 
-    public HomeCleaningRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
+    public CleaningRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
         this.context = context;
     }
 
     @Override
-    public HomeCleaningRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CleaningRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_appliance_repair_list, parent, false);
 
 
-        return new HomeCleaningRecycleAdapter.MyViewHolder(itemView);
+        return new CleaningRecycleAdapter.MyViewHolder(itemView);
 
 
     }

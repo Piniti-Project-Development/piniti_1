@@ -19,7 +19,7 @@ import bd.piniti.service.GeyserOneActivity;
 import bd.piniti.service.R;
 
 
-public class ApplianceRepairRecycleAdapter extends RecyclerView.Adapter<ApplianceRepairRecycleAdapter.MyViewHolder> {
+public class RepairRecycleAdapter extends RecyclerView.Adapter<RepairRecycleAdapter.MyViewHolder> {
 
     Context context;
 
@@ -48,18 +48,18 @@ public class ApplianceRepairRecycleAdapter extends RecyclerView.Adapter<Applianc
     }
 
 
-    public ApplianceRepairRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
+    public RepairRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
         this.context = context;
     }
 
     @Override
-    public ApplianceRepairRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RepairRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_appliance_repair_list, parent, false);
 
 
-        return new ApplianceRepairRecycleAdapter.MyViewHolder(itemView);
+        return new RepairRecycleAdapter.MyViewHolder(itemView);
 
 
     }

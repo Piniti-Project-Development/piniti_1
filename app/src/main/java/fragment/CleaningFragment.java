@@ -11,32 +11,31 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import Adapter.ApplianceRepairRecycleAdapter;
+import Adapter.CleaningRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.R;
 
 
-public class ApplianceRepairFragment extends Fragment {
-
+public class CleaningFragment extends Fragment {
 
     private View view;
 
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
-    private ApplianceRepairRecycleAdapter bAdapter;
+    private CleaningRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.geyser,R.drawable.ac,R.drawable.washing_machine,R.drawable.water_purifier,
-            R.drawable.tv,R.drawable.microwave};
-    private String title[] = {"Geyser","AC","Washing Machine","Water Purifier","TV","Microwave"};
+    private  Integer image[] = {R.drawable.home_deep_cleaning,R.drawable.kitchen_deep_cleaning,R.drawable.carpet_cleaning,R.drawable.bathroom_cleaning,
+            R.drawable.sofa_cleaning};
+    private String title[] = {"Home Deep Cleaning","Kitchen Deep Cleaning","Carpet Cleaning","Bathroom Cleaning","Sofa Cleaning"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_appliance_repair, container, false);
+        view = inflater.inflate(R.layout.fragment_cleaning, container, false);
 
-        /*category recyclerview code is here*/
+         /*category recyclerview code is here*/
 
         recyclerView = view.findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -49,13 +48,11 @@ public class ApplianceRepairFragment extends Fragment {
             HomeCategoryModelClass mycreditList = new HomeCategoryModelClass(image[i],title[i]);
             homeCategoryModelClasses.add(mycreditList);
         }
-        bAdapter = new ApplianceRepairRecycleAdapter(getActivity(),homeCategoryModelClasses);
+        bAdapter = new CleaningRecycleAdapter(getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
 
-
-        return view;
+        return  view;
     }
-
 
 
 }

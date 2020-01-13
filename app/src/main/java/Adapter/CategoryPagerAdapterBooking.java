@@ -4,16 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import fragment.ApplianceRepairFragment;
-import fragment.BeautyFragment;
-import fragment.ElectricianFragment;
-import fragment.HomeCleaningFragment;
-import fragment.MovingHomeFragment;
 import fragment.OnGoingFragment;
-import fragment.PaintingFragment;
-import fragment.PestControlFragment;
-import fragment.PlumberFragment;
-import fragment.WeddingEventsFragment;
 
 
 /**

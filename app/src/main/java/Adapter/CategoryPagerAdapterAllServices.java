@@ -5,11 +5,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 
-import fragment.ApplianceRepairFragment;
+import fragment.RepairFragment;
 import fragment.BeautyFragment;
 import fragment.ElectricianFragment;
 import fragment.HealthFragment;
-import fragment.HomeCleaningFragment;
+import fragment.CleaningFragment;
 import fragment.MovingHomeFragment;
 import fragment.PaintingFragment;
 import fragment.PestControlFragment;
@@ -37,10 +37,10 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 BeautyFragment tab1 = new BeautyFragment();
                                 return tab1;
                         case 1:
-                                ApplianceRepairFragment tab2 = new ApplianceRepairFragment();
+                                RepairFragment tab2 = new RepairFragment();
                                 return tab2;
                         case 2:
-                                HomeCleaningFragment tab3 = new HomeCleaningFragment();
+                                CleaningFragment tab3 = new CleaningFragment();
                                 return tab3;
 
                         case 3:
