@@ -5,12 +5,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 
+import fragment.BuySellFragment;
+import fragment.DeliveryFragment;
 import fragment.RepairFragment;
 import fragment.BeautyFragment;
 import fragment.ElectricianFragment;
 import fragment.HealthFragment;
 import fragment.CleaningFragment;
-import fragment.MovingHomeFragment;
+import fragment.PackShiftFragment;
 import fragment.PaintingFragment;
 import fragment.PestControlFragment;
 import fragment.PlumberFragment;
@@ -56,7 +58,7 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab6;
 
                         case 6:
-                                MovingHomeFragment tab7 = new MovingHomeFragment();
+                                PackShiftFragment tab7 = new PackShiftFragment();
                                 return tab7;
 
                         case 7:
@@ -64,27 +66,27 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab8;
 
                         case 8:
-                                MovingHomeFragment tab9 = new MovingHomeFragment();
+                                BuySellFragment tab9 = new BuySellFragment();
                                 return tab9;
                         case 9:
-                                MovingHomeFragment tab10 = new MovingHomeFragment();
+                                DeliveryFragment tab10 = new DeliveryFragment();
                                 return tab10;
                         case 10:
-                                MovingHomeFragment tab11 = new MovingHomeFragment();
+                                PackShiftFragment tab11 = new PackShiftFragment();
                                 return tab11;
                         case 11:
-                                MovingHomeFragment tab12 = new MovingHomeFragment();
+                                PackShiftFragment tab12 = new PackShiftFragment();
                                 return tab12;
                         case 12:
                                 ElectricianFragment tab13 = new ElectricianFragment();
                                 return tab13;
 
                         case 13:
-                                MovingHomeFragment tab14 = new MovingHomeFragment();
+                                PackShiftFragment tab14 = new PackShiftFragment();
                                 return tab14;
 
                         case 14:
-                                MovingHomeFragment tab15 = new MovingHomeFragment();
+                                PackShiftFragment tab15 = new PackShiftFragment();
                                 return tab15;
 
                         case 15:
@@ -92,43 +94,43 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab16;
 
                         case 16:
-                                MovingHomeFragment tab17 = new MovingHomeFragment();
+                                PackShiftFragment tab17 = new PackShiftFragment();
                                 return tab17;
 
                         case 17:
-                                MovingHomeFragment tab18 = new MovingHomeFragment();
+                                PackShiftFragment tab18 = new PackShiftFragment();
                                 return tab18;
 
                         case 18:
-                                MovingHomeFragment tab19 = new MovingHomeFragment();
+                                PackShiftFragment tab19 = new PackShiftFragment();
                                 return tab19;
                         case 19:
-                                MovingHomeFragment tab20 = new MovingHomeFragment();
+                                PackShiftFragment tab20 = new PackShiftFragment();
                                 return tab20;
                         case 20:
-                                MovingHomeFragment tab21 = new MovingHomeFragment();
+                                PackShiftFragment tab21 = new PackShiftFragment();
                                 return tab21;
                         case 21:
-                                MovingHomeFragment tab22 = new MovingHomeFragment();
+                                PackShiftFragment tab22 = new PackShiftFragment();
                                 return tab22;
                         case 22:
-                                MovingHomeFragment tab23 = new MovingHomeFragment();
+                                PackShiftFragment tab23 = new PackShiftFragment();
                                 return tab23;
 
                         case 23:
-                                MovingHomeFragment tab24 = new MovingHomeFragment();
+                                PackShiftFragment tab24 = new PackShiftFragment();
                                 return tab24;
 
                         case 24:
-                                MovingHomeFragment tab25 = new MovingHomeFragment();
+                                PackShiftFragment tab25 = new PackShiftFragment();
                                 return tab25;
 
                         case 25:
-                                MovingHomeFragment tab26 = new MovingHomeFragment();
+                                PackShiftFragment tab26 = new PackShiftFragment();
                                 return tab26;
 
                         case 26:
-                                MovingHomeFragment tab27 = new MovingHomeFragment();
+                                PackShiftFragment tab27 = new PackShiftFragment();
                                 return tab27;
                         case 27:
                                 TutorFragment tab28 = new TutorFragment();
