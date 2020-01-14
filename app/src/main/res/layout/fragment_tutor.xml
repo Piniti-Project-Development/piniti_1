@@ -86,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_italic"
-                    android:text="Why Rapid?"
+                    android:text="Why Piniti Service?"
                     android:textColor="@color/txt_color"
                     android:textSize="21.7sp"
                     android:textStyle="bold" />

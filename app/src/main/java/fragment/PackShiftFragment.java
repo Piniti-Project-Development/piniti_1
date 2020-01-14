@@ -11,40 +11,30 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import Adapter.ElectricianRecycleAdapter;
+import Adapter.PackShiftRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.R;
 
 
-public class ElectricianFragment extends Fragment {
+public class PackShiftFragment extends Fragment {
 
-
-
-    private View view;
-
-
+    private  View view;
 
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
-    private ElectricianRecycleAdapter bAdapter;
+    private PackShiftRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.fans,R.drawable.lights,R.drawable.inverter,
-            R.drawable.full_home_health_check1,R.drawable.fans,R.drawable.lights,
-            R.drawable.inverter,R.drawable.fans,R.drawable.lights,R.drawable.inverter,};
-    private String title[] = {"Fan","Lights","Outlets","Panels","Switches","Wiring",
-            "Home Security & Alarms","Cables, Network & Telephone","Lighting","Full Home Health Check"};
+    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers};
+    private String title[] = {"Moving Home","Moving Office","Moving Store"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_electrician, container, false);
+        view = inflater.inflate(R.layout.fragment_pack_shift, container, false);
 
-
-
-
-          /*category recyclerview code is here*/
+        /*category recyclerview code is here*/
 
         recyclerView = view.findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -57,11 +47,10 @@ public class ElectricianFragment extends Fragment {
             HomeCategoryModelClass mycreditList = new HomeCategoryModelClass(image[i],title[i]);
             homeCategoryModelClasses.add(mycreditList);
         }
-        bAdapter = new ElectricianRecycleAdapter(getActivity(),homeCategoryModelClasses);
+        bAdapter = new PackShiftRecycleAdapter(getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
 
-        return  view;
+        return view;
     }
-
 
 }

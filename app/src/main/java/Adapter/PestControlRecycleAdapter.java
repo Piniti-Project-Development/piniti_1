@@ -69,7 +69,7 @@ public class PestControlRecycleAdapter extends RecyclerView.Adapter<PestControlR
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==4){
+        if (position==10){
 
             holder.linear.setVisibility(View.GONE);
         }else {

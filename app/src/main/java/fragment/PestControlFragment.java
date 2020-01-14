@@ -27,8 +27,10 @@ public class PestControlFragment extends Fragment {
 
 
     private  Integer image[] = {R.drawable.general_pest_control,R.drawable.cockroach_control,R.drawable.bed_bugs,
-            R.drawable.termite_control, R.drawable.mosquito_control};
-    private String title[] = {"General Pest Control","Cockroach Control","Bed Bugs Control","Termite Control","Mosquito Control"};
+            R.drawable.cockroach_control,R.drawable.bed_bugs,R.drawable.cockroach_control,R.drawable.bed_bugs,
+            R.drawable.cockroach_control,R.drawable.bed_bugs, R.drawable.termite_control, R.drawable.mosquito_control};
+    private String title[] = {"General Pest Control","Mice Control","Mosquito Control","Cockroach Control",
+            "Bed Bugs Control","Termite Control","Mites","Ticks","Lice","Nematodes","Thrips"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

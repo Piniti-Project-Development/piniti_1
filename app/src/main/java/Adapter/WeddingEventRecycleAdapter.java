@@ -71,7 +71,7 @@ public class WeddingEventRecycleAdapter extends RecyclerView.Adapter<WeddingEven
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==4){
+        if (position==21){
 
             holder.linear.setVisibility(View.GONE);
         }else {

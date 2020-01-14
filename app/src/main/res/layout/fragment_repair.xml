@@ -18,7 +18,6 @@
             android:clipToPadding="false"
             android:orientation="vertical">
 
-
             <ExpandableListView
                 android:id="@+id/expandblelistview"
                 android:layout_width="match_parent"
@@ -82,6 +81,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -89,6 +89,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_furniture"
                 android:layout_width="match_parent"
@@ -126,6 +127,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -133,6 +135,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_machine"
                 android:layout_width="match_parent"
@@ -170,6 +173,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -177,6 +181,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_engine"
                 android:layout_width="match_parent"
@@ -214,6 +219,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -221,6 +227,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_motorcycle"
                 android:layout_width="match_parent"
@@ -258,6 +265,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -265,6 +273,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_auto"
                 android:layout_width="match_parent"
@@ -302,6 +311,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -309,6 +319,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_water_pump"
                 android:layout_width="match_parent"
@@ -346,6 +357,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -353,6 +365,7 @@
                 android:layout_marginEnd="17dp"
                 android:background="#e2e2e2"
                 />
+
             <LinearLayout
                 android:id="@+id/linear_tools"
                 android:layout_width="match_parent"
@@ -395,7 +408,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:background="#f5f7f8"/>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
