@@ -1,23 +1,23 @@
 package fragment;
 
-        import android.content.Intent;
-        import android.graphics.Color;
-        import android.os.Bundle;
-        import android.support.v4.app.Fragment;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.ExpandableListAdapter;
-        import android.widget.ExpandableListView;
-        import android.widget.LinearLayout;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
-        import Adapter.CustomAdapter;
-        import ModelClass.Team;
-        import bd.piniti.service.MehndiActivity;
-        import bd.piniti.service.R;
+import Adapter.CustomAdapter;
+import ModelClass.Team;
+import bd.piniti.service.MehndiActivity;
+import bd.piniti.service.R;
 
 
 public class BuySellFragment extends Fragment {
@@ -25,7 +25,7 @@ public class BuySellFragment extends Fragment {
 
     private View view;
 
-    LinearLayout linear_mehndi;
+    LinearLayout linear_constructionsupply;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,8 +34,8 @@ public class BuySellFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_buy_sell, container, false);
 
 
-        linear_mehndi = view.findViewById(R.id.linear_mehndi);
-        linear_mehndi.setOnClickListener(new View.OnClickListener() {
+        linear_constructionsupply = view.findViewById(R.id.linear_constructionsupply);
+        linear_constructionsupply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getActivity(), MehndiActivity.class);
@@ -47,7 +47,8 @@ public class BuySellFragment extends Fragment {
         //THE EXPANDABLE
         ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandblelistview);
         elv.setBackgroundColor(Color.WHITE);
-
+        ExpandableListView elv2 = view.findViewById(R.id.expandblelistview2);
+        elv2.setBackgroundColor(Color.WHITE);
 
 
 
@@ -56,6 +57,7 @@ public class BuySellFragment extends Fragment {
         //CREATE AND BIND TO ADAPTER
         CustomAdapter adapter=new CustomAdapter(getActivity(), team);
         elv.setAdapter(adapter);
+        elv2.setAdapter(adapter);
         elv.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override
@@ -125,29 +127,21 @@ public class BuySellFragment extends Fragment {
     private ArrayList<Team> getData()
     {
 
-        Team t1=new Team("Salon at home for Women");
-        t1.players.add("Regular Waxing");
-        t1.players.add("Facial");
-        t1.players.add("Pedicure & Manicure");
-        t1.players.add("Hair");
-        t1.players.add("Threading");
+        Team t1=new Team("Vehicles");
+        t1.players.add("Bike");
+        t1.players.add("Rickshaw");
+        t1.players.add("Motor Bike");
+        t1.players.add("Auto");
+        t1.players.add("Car");
+        t1.players.add("Bus");
+        t1.players.add("Truck");
+        t1.players.add("Ambulance");
 
-        Team t2=new Team("Salon for Man");
-        t2.players.add("Hair Style");
-        t2.players.add("Hair Cut");
-        t2.players.add("Hair Color");
-        t2.players.add("Regular Waxing");
-        t2.players.add("Beard Trim");
-
-        Team t3=new Team("Salon for Women");
-        t3.players.add("Hair Style");
-        t3.players.add("Hair Cut");
-        t3.players.add("Hair Color");
-        t3.players.add("Regular Waxing");
-        t3.players.add("Facial");
-        t3.players.add("Pedicure & Manicure");
-        t3.players.add("Hair");
-        t3.players.add("Threading");
+        Team t2=new Team("Wholesale");
+        t2.players.add("Garments");
+        t2.players.add("Electronics");
+        t2.players.add("Farms Products");
+        t2.players.add("Agriculture Products");
 
         //  Team t3=new Team("Mehendi Artists");
 //        t3.players.add("Regular Waxing");
@@ -159,7 +153,7 @@ public class BuySellFragment extends Fragment {
         ArrayList<Team> allTeams=new ArrayList<Team>();
         allTeams.add(t1);
         allTeams.add(t2);
-        allTeams.add(t3);
+
 
         return allTeams;
 
