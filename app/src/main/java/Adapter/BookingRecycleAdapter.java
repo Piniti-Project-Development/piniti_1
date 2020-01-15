@@ -27,19 +27,14 @@ public class BookingRecycleAdapter extends RecyclerView.Adapter<BookingRecycleAd
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
 
-
         TextView title;
-
 
 
         public MyViewHolder(View view) {
             super(view);
 
 
-            title = (TextView) view.findViewById(R.id.title);
-
-
-
+            title = view.findViewById(R.id.title);
         }
 
     }
@@ -54,11 +49,7 @@ public class BookingRecycleAdapter extends RecyclerView.Adapter<BookingRecycleAd
     public BookingRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_booking_list, parent, false);
-
-
         return new BookingRecycleAdapter.MyViewHolder(itemView);
-
-
     }
 
     @Override
@@ -66,32 +57,19 @@ public class BookingRecycleAdapter extends RecyclerView.Adapter<BookingRecycleAd
         final BookingModelClass lists = OfferList.get(position);
 
         holder.title.setText(lists.getTitle());
-
-
-
-
-
-
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myPos = position;
                 notifyDataSetChanged();
-
             }
         });
-
-
     }
-
 
     @Override
     public int getItemCount() {
         return OfferList.size();
-
     }
-
 }
 
 

@@ -40,4 +40,5 @@
     <string name="account_type">Account Type</string>
     <string name="customer">Customer</string>
     <string name="service_provider">Service Provider</string>
+    <string name="search_hint">Service Location</string>
 </resources>

@@ -16,7 +16,7 @@ import ModelClass.BookingModelClass;
 import bd.piniti.service.R;
 
 
-public class OnGoingFragment extends Fragment {
+public class OnGoingBookingFragment extends Fragment {
 
 
     private View view;
@@ -26,13 +26,13 @@ public class OnGoingFragment extends Fragment {
     private RecyclerView recyclerView;
     private BookingRecycleAdapter bAdapter;
 
-    private String title[] = {"Salon at home for Women","Massage for Men"};
+    private String[] title = {"Salon at home for Women", "Massage for Men"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_on_going, container, false);
+        view = inflater.inflate(R.layout.fragment_on_going_booking, container, false);
 
         /*category recyclerview code is here*/
 

@@ -22,6 +22,7 @@
     <color name="gray">#717273</color>
     <color name="inactive">#8f909e</color>
     <color name="radio_color">#e75748</color>
+    <color name="red_color">#EE3724</color>
 
     <color name="roboto_calendar_background">#FFFFFF</color>
     <color name="roboto_calendar_month_font">#38393f</color>

@@ -10,7 +10,6 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -25,14 +24,10 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
-import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -59,6 +54,8 @@ public class HomePageActivity extends AppCompatActivity {
     private double latitude, logitude;
     // Declare Database for data fields
     private DatabaseReference databaseUser;
+    String service;
+    Boolean chooseLocation;
 
 
     protected BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -132,6 +129,18 @@ public class HomePageActivity extends AppCompatActivity {
         // Set database location
         databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("Locations");
 
+        databaseUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                service = dataSnapshot.child("service_loc_text").getValue(String.class);
+                chooseLocation=(Boolean) dataSnapshot.child("locationChoose").getValue();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         loadFragment(new HomeFragment());
 
 
@@ -152,32 +161,47 @@ public class HomePageActivity extends AppCompatActivity {
 
         }
 
-
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
-                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         if (locationManager != null) {
             if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                onLocationChange(location);
+               // onLocationChange(location);
+                latitude = location.getLatitude();
+                logitude = location.getLongitude();
+
+                try {
+                    Geocoder geocoder = new Geocoder(this);
+                    List<Address> addresses;
+                    addresses = geocoder.getFromLocation(latitude, logitude, 1);
+                    String countryName = addresses.get(0).getCountryName();
+                    String addressLine = addresses.get(0).getAddressLine(1);
+                    String adminArea = addresses.get(0).getAdminArea();
+                    String subAdminArea = addresses.get(0).getSubAdminArea();
+                    String locality = addresses.get(0).getLocality();
+                    String subLocality = addresses.get(0).getSubLocality();
+                    String fetureName = addresses.get(0).getFeatureName();
+                    String address = locality + ", " + subAdminArea + ", " + adminArea;
+                    databaseUser.child("last_location").setValue(address);
+
+                    locationOn.setVisibility(View.VISIBLE);
+                    city.setText(address);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                /*if(!chooseLocation.equals(true)){
+
+                }else{
+                    city.setText(service);
+                }*/
             } else {
 
-                databaseUser.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                        locationOff.setVisibility(View.VISIBLE);
-                        String cityname = dataSnapshot.child("last_location").getValue(String.class);
-                        city.setText(cityname);
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                locationOff.setVisibility(View.VISIBLE);
                 //city.setText(R.string.turn_on_location);
             }
         }
@@ -207,27 +231,7 @@ public class HomePageActivity extends AppCompatActivity {
 
 
     private void onLocationChange(Location location) {
-        latitude = location.getLatitude();
-        logitude = location.getLongitude();
-        try {
-            Geocoder geocoder = new Geocoder(this);
-            List<Address> addresses;
-            addresses = geocoder.getFromLocation(latitude, logitude, 1);
-            String countryName = addresses.get(0).getCountryName();
-            String addressLine = addresses.get(0).getAddressLine(1);
-            String adminArea = addresses.get(0).getAdminArea();
-            String subAdminArea = addresses.get(0).getSubAdminArea();
-            String locality = addresses.get(0).getLocality();
-            String subLocality = addresses.get(0).getSubLocality();
-            String fetureName = addresses.get(0).getFeatureName();
-            String address = locality + ", " + subAdminArea + ", " + adminArea;
-            databaseUser.child("last_location").setValue(address);
-            locationOn.setVisibility(View.VISIBLE);
-            city.setText(address);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 

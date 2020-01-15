@@ -9,9 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#DDDDDD"
-        android:elevation="5dp"
+        android:queryHint="Search Location"
         android:iconifiedByDefault="false"
-        android:queryHint="Working Location" />
+        android:textAlignment="viewEnd" />
 
     <fragment
         android:id="@+id/google_map"
