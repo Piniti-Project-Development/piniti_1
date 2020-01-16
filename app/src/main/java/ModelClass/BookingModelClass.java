@@ -5,6 +5,7 @@ public class BookingModelClass {
 
     String accpt;
     String title;
+    String description;
     String action;
     String rate;
     String feedback;
@@ -13,6 +14,10 @@ public class BookingModelClass {
 
     public BookingModelClass(String title) {
         this.title = title;
+    }
+    public BookingModelClass(String title, String description) {
+        this.title = title;
+        this.description = description;
     }
 
     public BookingModelClass(String accpt,String title,String action, String rate, String feedback, int image) {
@@ -38,6 +43,14 @@ public class BookingModelClass {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getAction() {
