@@ -1,6 +1,9 @@
 package Adapter;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,22 +27,35 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
     private List<HomeCategoryModelClass> OfferList;
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+        final HomeCategoryModelClass lists = OfferList.get(position);
+        holder.image.setImageResource(lists.getImage());
+        holder.title.setText(lists.getTitle());
 
+        if (position == 4) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    holder.itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            try{
+                                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=bd.piniti.service")));
+                            }catch (ActivityNotFoundException e){
+                                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=bd.piniti.service")));
+                            }
+                        }
+                    });
+                }
+            });
+        }
+        if (position == 7) {
 
-        ImageView image;
-        TextView title;
-        LinearLayout linear;
+            holder.linear.setVisibility(View.GONE);
+        } else {
 
-
-        public MyViewHolder(View view) {
-            super(view);
-
-            image = (ImageView) view.findViewById(R.id.image);
-            title = (TextView) view.findViewById(R.id.title);
-            linear = (LinearLayout) view.findViewById(R.id.linear);
-
-
+            holder.linear.setVisibility(View.VISIBLE);
         }
 
     }
@@ -61,26 +77,25 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
 
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        final HomeCategoryModelClass lists = OfferList.get(position);
-        holder.image.setImageResource(lists.getImage());
-        holder.title.setText(lists.getTitle());
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        if (position==7){
 
-            holder.linear.setVisibility(View.GONE);
-        }else {
+        ImageView image;
+        TextView title;
+        LinearLayout linear;
 
-            holder.linear.setVisibility(View.VISIBLE);
+
+        public MyViewHolder(View view) {
+            super(view);
+
+            image = view.findViewById(R.id.image);
+            title = view.findViewById(R.id.title);
+            linear = view.findViewById(R.id.linear);
+
 
         }
 
-
-
-
     }
-
 
     @Override
     public int getItemCount() {
