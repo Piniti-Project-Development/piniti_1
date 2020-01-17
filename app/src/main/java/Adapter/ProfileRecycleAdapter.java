@@ -42,11 +42,9 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
 
                     Dialog myDialog = new Dialog(context);
                     LinearLayout chatButton, callButton;
-                    ImageView close;
                     myDialog.setContentView(R.layout.help_popup);
                     chatButton = myDialog.findViewById(R.id.chat);
                     callButton = myDialog.findViewById(R.id.talk);
-                    close = myDialog.findViewById(R.id.txtclose);
 
                     chatButton.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -57,20 +55,14 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
                     callButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Toast.makeText(context, "121 not available now", Toast.LENGTH_LONG).show();
-                        }
-                    });
-                    close.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            myDialog.dismiss();
+                            Intent intent=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "12345"));
+                            context.startActivity(intent);
                         }
                     });
                     myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     myDialog.show();
                 }
             });
-
         }
 
         if (position == 4) {

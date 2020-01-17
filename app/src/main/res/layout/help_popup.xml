@@ -4,15 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:background="@color/white"
-    android:orientation="vertical"
-    android:padding="5dp">
-    <ImageView
-        android:id="@+id/txtclose"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="end"
-        android:background="@drawable/ic_circle_cancel"
-        android:gravity="center"/>
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +29,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="We are here 24/7 only to serve you.\nPlease call us to 16516 or chat with us\nfor any kind of query."
+            android:text="We are here 24/7 only to serve you.\nPlease call us to 12345 or chat with us\nfor any kind of query."
             android:textColor="@color/gray"/>
     </LinearLayout>
     <View
@@ -92,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Let's Talk"
+                android:text="Call Us"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
         </LinearLayout>
