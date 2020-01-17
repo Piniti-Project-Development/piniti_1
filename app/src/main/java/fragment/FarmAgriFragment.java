@@ -20,44 +20,43 @@ import bd.piniti.service.MehndiActivity;
 import bd.piniti.service.R;
 
 
-public class BuySellFragment extends Fragment {
+public class FarmAgriFragment extends Fragment {
 
 
     private View view;
 
-    LinearLayout linear_constructionsupply;
+    LinearLayout linear_labor, linear_coldstorage, linear_machinetools, linear_transportation, linear_farmconstruction;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_buy_sell, container, false);
+        view = inflater.inflate(R.layout.fragment_farm_agri, container, false);
 
 
-        linear_constructionsupply = view.findViewById(R.id.linear_constructionsupply);
-        linear_constructionsupply.setOnClickListener(new View.OnClickListener() {
+
+        linear_labor = view.findViewById(R.id.linear_labor);
+        linear_labor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MehndiActivity.class);
+                Intent intent =new Intent(getActivity(),MehndiActivity.class);
                 startActivity(intent);
             }
         });
 
 
         //THE EXPANDABLE
-        ExpandableListView elv = view.findViewById(R.id.expandblelistview);
+        ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandblelistview);
         elv.setBackgroundColor(Color.WHITE);
-        ExpandableListView elv2 = view.findViewById(R.id.expandblelistview2);
-        elv2.setBackgroundColor(Color.WHITE);
 
-        final ArrayList<Team> electroList = getElectronicsData();
-        final ArrayList<Team> homeList = getHomeData();
+
+
+
+        final ArrayList<Team> team=getData();
 
         //CREATE AND BIND TO ADAPTER
-        CustomAdapter electronicAdapter = new CustomAdapter(getActivity(), electroList);
-        CustomAdapter homeAdapter = new CustomAdapter(getActivity(), homeList);
-        elv.setAdapter(electronicAdapter);
-        elv2.setAdapter(homeAdapter);
+        CustomAdapter adapter=new CustomAdapter(getActivity(), team);
+        elv.setAdapter(adapter);
         elv.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override
@@ -75,40 +74,21 @@ public class BuySellFragment extends Fragment {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPos,
                                         int childPos, long id) {
 
-                Toast.makeText(getActivity().getApplicationContext(), electroList.get(groupPos).players.get(childPos), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), team.get(groupPos).players.get(childPos), Toast.LENGTH_SHORT).show();
 
                 return false;
             }
         });
 
-        elv2.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
-            @Override
-            public boolean onGroupClick(ExpandableListView parent, View v,
-                                        int groupPosition, long id) {
-                setListViewHeight(parent, groupPosition);
-                return false;
-            }
-        });
 
-        //SET ONCLICK LISTENER
-        elv2.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPos,
-                                        int childPos, long id) {
 
-                Toast.makeText(getActivity().getApplicationContext(), electroList.get(groupPos).players.get(childPos), Toast.LENGTH_SHORT).show();
-
-                return false;
-            }
-        });
-
-        return view;
+        return  view;
     }
 
     private void setListViewHeight(ExpandableListView listView, int groupPosition) {
-        ExpandableListAdapter listAdapter = listView.getExpandableListAdapter();
+        ExpandableListAdapter listAdapter = (ExpandableListAdapter) listView.getExpandableListAdapter();
         int totalHeight = 0;
         int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(),
                 View.MeasureSpec.EXACTLY);
@@ -142,40 +122,58 @@ public class BuySellFragment extends Fragment {
     }
 
     //ADD AND GET DATA
-    private ArrayList<Team> getElectronicsData() {
 
-        Team t1=new Team("Vehicles");
-        t1.players.add("Bike");
-        t1.players.add("Rickshaw");
-        t1.players.add("Motor Bike");
-        t1.players.add("Auto");
-        t1.players.add("Car");
-        t1.players.add("Bus");
-        t1.players.add("Truck");
-        t1.players.add("Ambulance");
+    private ArrayList<Team> getData()
+    {
+        Team t1 = new Team("Plantation");
+        t1.players.add("Agriculture Tools");
+        t1.players.add("Seeds & Plants");
+        t1.players.add("Fertilizer");
+        t1.players.add("Health Management");
+        t1.players.add("Insecticide");
+        t1.players.add("Market");
+        t1.players.add("Labor");
 
-        ArrayList<Team> allTeams = new ArrayList<Team>();
+        Team t2 = new Team("Diary");
+        t2.players.add("Equipment");
+        t2.players.add("Cow");
+        t2.players.add("Feeding");
+        t2.players.add("Health Management");
+        t2.players.add("Market");
+        t2.players.add("Labor");
+
+        Team t3=new Team("Poultry");
+        t3.players.add("Equipment");
+        t3.players.add("Chicks");
+        t3.players.add("Feeding");
+        t3.players.add("Health Management");
+        t3.players.add("Market");
+        t3.players.add("Labor");
+
+        Team t4=new Team("Fishery");
+        t4.players.add("Equipment");
+        t4.players.add("Fish");
+        t4.players.add("Feeding");
+        t4.players.add("Health Management");
+        t4.players.add("Market");
+        t4.players.add("Labor");
+
+        //  Team t3=new Team("Mehendi Artists");
+//        t3.players.add("Regular Waxing");
+//        t3.players.add("Facial");
+//        t3.players.add("Pedicure & Manicure");
+//        t3.players.add("Hair");
+//        t3.players.add("Threading");
+
+        ArrayList<Team> allTeams=new ArrayList<Team>();
         allTeams.add(t1);
-
-        return allTeams;
-
-    }
-
-    //ADD AND GET DATA
-    private ArrayList<Team> getHomeData() {
-        Team t2=new Team("Wholesale");
-        t2.players.add("Garments");
-        t2.players.add("Electronics");
-        t2.players.add("Farm Products");
-        t2.players.add("Agriculture Products");
-
-        ArrayList<Team> allTeams = new ArrayList<Team>();
         allTeams.add(t2);
+        allTeams.add(t3);
+        allTeams.add(t4);
 
         return allTeams;
 
     }
-
     public boolean onChildClick(ExpandableListView parent, View v,
                                 int groupPosition, int childPosition, long id) {
 

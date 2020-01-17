@@ -11,28 +11,28 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import Adapter.PackShiftRecycleAdapter;
+import Adapter.DevotionalServiceRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.R;
 
 
-public class PackShiftFragment extends Fragment {
+public class DevotionalServiceFragment extends Fragment {
 
     private  View view;
 
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
-    private PackShiftRecycleAdapter bAdapter;
+    private DevotionalServiceRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers};
-    private String title[] = {"Moving Home","Moving Office","Moving Store"};
+    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers};
+    private String title[] = {"All Devotional Services","Devotional Books","Pondit","Devotional Accessories"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_design, container, false);
+        view = inflater.inflate(R.layout.fragment_devotional_service, container, false);
 
         /*category recyclerview code is here*/
 
@@ -47,7 +47,7 @@ public class PackShiftFragment extends Fragment {
             HomeCategoryModelClass mycreditList = new HomeCategoryModelClass(image[i],title[i]);
             homeCategoryModelClasses.add(mycreditList);
         }
-        bAdapter = new PackShiftRecycleAdapter(getActivity(),homeCategoryModelClasses);
+        bAdapter = new DevotionalServiceRecycleAdapter (getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
 
         return view;

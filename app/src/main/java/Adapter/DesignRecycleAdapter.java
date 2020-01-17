@@ -18,7 +18,7 @@ import bd.piniti.service.MovingHomeOneActivity;
 import bd.piniti.service.R;
 
 
-public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecycleAdapter.MyViewHolder> {
+public class DesignRecycleAdapter extends RecyclerView.Adapter<DesignRecycleAdapter.MyViewHolder> {
 
     Context context;
 
@@ -47,18 +47,18 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
     }
 
 
-    public PackShiftRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
+    public DesignRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
         this.context = context;
     }
 
     @Override
-    public PackShiftRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public DesignRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_appliance_repair_list, parent, false);
 
 
-        return new PackShiftRecycleAdapter.MyViewHolder(itemView);
+        return new DesignRecycleAdapter.MyViewHolder(itemView);
 
 
     }
@@ -69,7 +69,7 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==3){
+        if (position==5){
 
             holder.linear.setVisibility(View.GONE);
         }else {

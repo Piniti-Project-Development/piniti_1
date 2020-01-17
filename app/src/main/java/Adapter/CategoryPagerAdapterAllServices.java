@@ -7,6 +7,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import fragment.BuySellFragment;
 import fragment.DeliveryFragment;
+import fragment.DesignFragment;
+import fragment.DevotionalServiceFragment;
+import fragment.FarmAgriFragment;
+import fragment.FinancialServicesFragment;
 import fragment.RepairFragment;
 import fragment.BeautyFragment;
 import fragment.ElectricianFragment;
@@ -72,21 +76,21 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 DeliveryFragment tab10 = new DeliveryFragment();
                                 return tab10;
                         case 10:
-                                PackShiftFragment tab11 = new PackShiftFragment();
+                                DesignFragment tab11 = new DesignFragment();
                                 return tab11;
                         case 11:
-                                PackShiftFragment tab12 = new PackShiftFragment();
+                                DevotionalServiceFragment tab12 = new DevotionalServiceFragment();
                                 return tab12;
                         case 12:
                                 ElectricianFragment tab13 = new ElectricianFragment();
                                 return tab13;
 
                         case 13:
-                                PackShiftFragment tab14 = new PackShiftFragment();
+                                FarmAgriFragment tab14 = new FarmAgriFragment();
                                 return tab14;
 
                         case 14:
-                                PackShiftFragment tab15 = new PackShiftFragment();
+                                FinancialServicesFragment tab15 = new FinancialServicesFragment();
                                 return tab15;
 
                         case 15:

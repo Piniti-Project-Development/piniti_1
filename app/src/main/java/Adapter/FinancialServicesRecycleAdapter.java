@@ -14,11 +14,11 @@ import android.widget.TextView;
 import java.util.List;
 
 import ModelClass.HomeCategoryModelClass;
-import bd.piniti.service.MovingHomeOneActivity;
+import bd.piniti.service.HomePaintingOneActivity;
 import bd.piniti.service.R;
 
 
-public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecycleAdapter.MyViewHolder> {
+public class FinancialServicesRecycleAdapter extends RecyclerView.Adapter<FinancialServicesRecycleAdapter.MyViewHolder> {
 
     Context context;
 
@@ -47,18 +47,18 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
     }
 
 
-    public PackShiftRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
+    public FinancialServicesRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
         this.context = context;
     }
 
     @Override
-    public PackShiftRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public FinancialServicesRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_appliance_repair_list, parent, false);
 
 
-        return new PackShiftRecycleAdapter.MyViewHolder(itemView);
+        return new FinancialServicesRecycleAdapter.MyViewHolder(itemView);
 
 
     }
@@ -69,7 +69,7 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==3){
+        if (position==2){
 
             holder.linear.setVisibility(View.GONE);
         }else {
@@ -84,9 +84,10 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
 
 
 
-                    Intent intent = new Intent(context, MovingHomeOneActivity.class);
+                    Intent intent = new Intent(context, HomePaintingOneActivity.class);
+                    intent.putExtra("layout",1);
                     context.startActivity(intent);
-              
+
 
             }
         });
