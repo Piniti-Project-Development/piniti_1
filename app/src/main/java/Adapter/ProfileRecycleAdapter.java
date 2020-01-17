@@ -1,8 +1,11 @@
 package Adapter;
 
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -23,16 +27,51 @@ import bd.piniti.service.location.TermsCondition;
 public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAdapter.MyViewHolder> {
 
     Context context;
-
-
     private List<HomeCategoryModelClass> OfferList;
-
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         final HomeCategoryModelClass lists = OfferList.get(position);
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
+
+        if (position == 3) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Dialog myDialog = new Dialog(context);
+                    LinearLayout chatButton, callButton;
+                    ImageView close;
+                    myDialog.setContentView(R.layout.help_popup);
+                    chatButton = myDialog.findViewById(R.id.chat);
+                    callButton = myDialog.findViewById(R.id.talk);
+                    close = myDialog.findViewById(R.id.txtclose);
+
+                    chatButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "Chat board not available now", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    callButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "121 not available now", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    close.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            myDialog.dismiss();
+                        }
+                    });
+                    myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    myDialog.show();
+                }
+            });
+
+        }
 
         if (position == 4) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -41,10 +80,10 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            try{
+                            try {
                                 context.startActivity(new Intent(Intent.ACTION_VIEW,
                                         Uri.parse("market://details?id=bd.piniti.service")));
-                            }catch (ActivityNotFoundException e){
+                            } catch (ActivityNotFoundException e) {
                                 context.startActivity(new Intent(Intent.ACTION_VIEW,
                                         Uri.parse("https://play.google.com/store/apps/details?id=bd.piniti.service")));
                             }
@@ -67,9 +106,7 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
 
             holder.linear.setVisibility(View.VISIBLE);
         }
-
     }
-
 
     public ProfileRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
@@ -83,17 +120,12 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
 
 
         return new ProfileRecycleAdapter.MyViewHolder(itemView);
-
-
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
-
         ImageView image;
         TextView title;
         LinearLayout linear;
-
 
         public MyViewHolder(View view) {
             super(view);
@@ -101,8 +133,6 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
             image = view.findViewById(R.id.image);
             title = view.findViewById(R.id.title);
             linear = view.findViewById(R.id.linear);
-
-
         }
 
     }
