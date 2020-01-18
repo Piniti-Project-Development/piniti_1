@@ -14,11 +14,14 @@ import android.widget.TextView;
 import java.util.List;
 
 import ModelClass.HomeCategoryModelClass;
-import bd.piniti.service.MovingHomeOneActivity;
+import bd.piniti.service.FanOneActivity;
+import bd.piniti.service.FullHomeCheckElectricityOneActivity;
+import bd.piniti.service.InverterOneActivity;
+import bd.piniti.service.LightOneActivity;
 import bd.piniti.service.R;
 
 
-public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecycleAdapter.MyViewHolder> {
+public class HomeServicesRecycleAdapter extends RecyclerView.Adapter<HomeServicesRecycleAdapter.MyViewHolder> {
 
     Context context;
 
@@ -47,18 +50,18 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
     }
 
 
-    public PackShiftRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
+    public HomeServicesRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
         this.context = context;
     }
 
     @Override
-    public PackShiftRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public HomeServicesRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_appliance_repair_list, parent, false);
 
 
-        return new PackShiftRecycleAdapter.MyViewHolder(itemView);
+        return new HomeServicesRecycleAdapter.MyViewHolder(itemView);
 
 
     }
@@ -69,7 +72,7 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==2){
+        if (position==15){
 
             holder.linear.setVisibility(View.GONE);
         }else {
@@ -83,10 +86,22 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
             public void onClick(View v) {
 
 
-
-                    Intent intent = new Intent(context, MovingHomeOneActivity.class);
+                if(position==0){
+                    Intent intent = new Intent(context, FanOneActivity.class);
                     context.startActivity(intent);
-              
+                }else if(position==1){
+                    Intent intent = new Intent(context, LightOneActivity.class);
+                    context.startActivity(intent);
+                }else if(position==2){
+                    Intent intent = new Intent(context, InverterOneActivity.class);
+                    context.startActivity(intent);
+                }else if(position==3){
+                    Intent intent = new Intent(context, FullHomeCheckElectricityOneActivity.class);
+                    context.startActivity(intent);
+                }
+
+
+
 
             }
         });

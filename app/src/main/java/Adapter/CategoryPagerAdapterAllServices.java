@@ -11,6 +11,8 @@ import fragment.DesignFragment;
 import fragment.DevotionalServiceFragment;
 import fragment.FarmAgriFragment;
 import fragment.FinancialServicesFragment;
+import fragment.HomeServicesFragment;
+import fragment.HotelsFragment;
 import fragment.RepairFragment;
 import fragment.BeautyFragment;
 import fragment.ElectricianFragment;
@@ -98,11 +100,11 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab16;
 
                         case 16:
-                                PackShiftFragment tab17 = new PackShiftFragment();
+                                HomeServicesFragment tab17 = new HomeServicesFragment();
                                 return tab17;
 
                         case 17:
-                                PackShiftFragment tab18 = new PackShiftFragment();
+                                HotelsFragment tab18 = new HotelsFragment();
                                 return tab18;
 
                         case 18:

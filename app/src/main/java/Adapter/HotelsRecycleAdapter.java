@@ -18,7 +18,7 @@ import bd.piniti.service.MovingHomeOneActivity;
 import bd.piniti.service.R;
 
 
-public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecycleAdapter.MyViewHolder> {
+public class HotelsRecycleAdapter extends RecyclerView.Adapter<HotelsRecycleAdapter.MyViewHolder> {
 
     Context context;
 
@@ -47,18 +47,18 @@ public class PackShiftRecycleAdapter extends RecyclerView.Adapter<PackShiftRecyc
     }
 
 
-    public PackShiftRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
+    public HotelsRecycleAdapter(Context context, List<HomeCategoryModelClass> offerList) {
         this.OfferList = offerList;
         this.context = context;
     }
 
     @Override
-    public PackShiftRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public HotelsRecycleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_appliance_repair_list, parent, false);
 
 
-        return new PackShiftRecycleAdapter.MyViewHolder(itemView);
+        return new HotelsRecycleAdapter.MyViewHolder(itemView);
 
 
     }
