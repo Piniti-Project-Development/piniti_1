@@ -63,6 +63,7 @@ public class All_Services_Activity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Design"));
         tabLayout.addTab(tabLayout.newTab().setText("Devotional Services"));
         tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
+        tabLayout.addTab(tabLayout.newTab().setText("Entertainment"));
         tabLayout.addTab(tabLayout.newTab().setText("Farm & Agri"));
         tabLayout.addTab(tabLayout.newTab().setText("Financial Services"));
         tabLayout.addTab(tabLayout.newTab().setText("Health"));
@@ -103,7 +104,7 @@ public class All_Services_Activity extends AppCompatActivity {
         /*on tab viewpager change code is here*/
 
         final ViewPager viewPager1 = (ViewPager) findViewById(R.id.pager);
-        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 28);
+        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 29);
         viewPager1.setAdapter(adapter);
         viewPager1.setOffscreenPageLimit(1);
         viewPager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

@@ -11,40 +11,32 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import Adapter.HomeServicesRecycleAdapter;
+import Adapter.EntertainmentRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.R;
 
 
-public class HomeServicesFragment extends Fragment {
-
+public class EntertainmentFragment extends Fragment {
 
 
     private View view;
 
 
-
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
-    private HomeServicesRecycleAdapter bAdapter;
+    private EntertainmentRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.fans,R.drawable.lights,R.drawable.inverter,
-            R.drawable.full_home_health_check1,R.drawable.fans,R.drawable.lights,
-            R.drawable.inverter,R.drawable.fans,R.drawable.lights,R.drawable.inverter,
-            R.drawable.lights,R.drawable.inverter,R.drawable.full_home_health_check1,
-            R.drawable.fans,R.drawable.lights};
-    private String title[] = {"Home Maid","Landscaper","Gardener","Additions & Remodels",
-            "Cabinets & Countertop","Carpet", "Doors & Windows","Driveway, Patios & Walk",
-            "Fences","Interior Designer","Roofing","Tile & Stone","Walls & Ceilings","Construction Supply","Property Management"};
+    private  Integer image[] = {R.drawable.blocks_leakages,R.drawable.toilet_and_sanitary_work,R.drawable.bathroom_fitting,
+            R.drawable.water_tank,R.drawable.full_home_health_check,R.drawable.toilet_and_sanitary_work,R.drawable.bathroom_fitting,
+            R.drawable.water_tank,R.drawable.full_home_health_check};
+    private String title[] = {"Amusement Park","Park","Theater","Museum","Singer","Band","Magician","Dancer","Instrument Player"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_home_services, container, false);
-
-
+        view =  inflater.inflate(R.layout.fragment_entertainment, container, false);
 
 
           /*category recyclerview code is here*/
@@ -60,7 +52,7 @@ public class HomeServicesFragment extends Fragment {
             HomeCategoryModelClass mycreditList = new HomeCategoryModelClass(image[i],title[i]);
             homeCategoryModelClasses.add(mycreditList);
         }
-        bAdapter = new HomeServicesRecycleAdapter (getActivity(),homeCategoryModelClasses);
+        bAdapter = new EntertainmentRecycleAdapter(getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
 
         return  view;

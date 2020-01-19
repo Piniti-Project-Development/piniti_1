@@ -11,7 +11,7 @@ package fragment;
 
         import java.util.ArrayList;
 
-        import Adapter.PackShiftRecycleAdapter;
+        import Adapter.DeliveryRecycleAdapter;
         import ModelClass.HomeCategoryModelClass;
         import bd.piniti.service.R;
 
@@ -22,11 +22,11 @@ public class DeliveryFragment extends Fragment {
 
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
-    private PackShiftRecycleAdapter bAdapter;
+    private DeliveryRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers};
-    private String title[] = {"Domestic Delivery","International Delivery"};
+    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers};
+    private String title[] = {"Local Delivery","Domestic Delivery","International Delivery"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +47,7 @@ public class DeliveryFragment extends Fragment {
             HomeCategoryModelClass mycreditList = new HomeCategoryModelClass(image[i],title[i]);
             homeCategoryModelClasses.add(mycreditList);
         }
-        bAdapter = new PackShiftRecycleAdapter(getActivity(),homeCategoryModelClasses);
+        bAdapter = new DeliveryRecycleAdapter (getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
 
         return view;
