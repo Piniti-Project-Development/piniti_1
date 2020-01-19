@@ -9,10 +9,16 @@ import fragment.BuySellFragment;
 import fragment.DeliveryFragment;
 import fragment.DesignFragment;
 import fragment.DevotionalServiceFragment;
+import fragment.EntertainmentFragment;
 import fragment.FarmAgriFragment;
 import fragment.FinancialServicesFragment;
 import fragment.HomeServicesFragment;
 import fragment.HotelsFragment;
+import fragment.ItFragment;
+import fragment.LaundryFragment;
+import fragment.LocalServicesFragment;
+import fragment.ProfessionalServicesFragment;
+import fragment.RentalFragment;
 import fragment.RepairFragment;
 import fragment.BeautyFragment;
 import fragment.ElectricianFragment;
@@ -22,6 +28,10 @@ import fragment.PackShiftFragment;
 import fragment.PaintingFragment;
 import fragment.PestControlFragment;
 import fragment.PlumberFragment;
+import fragment.RestaurantFragment;
+import fragment.ShoppingFragment;
+import fragment.TransportationFragment;
+import fragment.TravelFragment;
 import fragment.TutorFragment;
 import fragment.WeddingEventsFragment;
 
@@ -86,65 +96,67 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                         case 12:
                                 ElectricianFragment tab13 = new ElectricianFragment();
                                 return tab13;
-
                         case 13:
-                                FarmAgriFragment tab14 = new FarmAgriFragment();
+                                EntertainmentFragment tab14 = new EntertainmentFragment();
                                 return tab14;
-
                         case 14:
-                                FinancialServicesFragment tab15 = new FinancialServicesFragment();
+                                FarmAgriFragment tab15 = new FarmAgriFragment();
                                 return tab15;
 
                         case 15:
-                                HealthFragment tab16 = new HealthFragment();
+                                FinancialServicesFragment tab16 = new FinancialServicesFragment();
                                 return tab16;
 
                         case 16:
-                                HomeServicesFragment tab17 = new HomeServicesFragment();
+                                HealthFragment tab17 = new HealthFragment();
                                 return tab17;
 
                         case 17:
-                                HotelsFragment tab18 = new HotelsFragment();
+                                HomeServicesFragment tab18 = new HomeServicesFragment();
                                 return tab18;
 
                         case 18:
-                                PackShiftFragment tab19 = new PackShiftFragment();
+                                HotelsFragment tab19 = new HotelsFragment();
                                 return tab19;
+
                         case 19:
-                                PackShiftFragment tab20 = new PackShiftFragment();
+                                ItFragment tab20 = new ItFragment();
                                 return tab20;
                         case 20:
-                                PackShiftFragment tab21 = new PackShiftFragment();
+                                LaundryFragment tab21 = new LaundryFragment();
                                 return tab21;
                         case 21:
-                                PackShiftFragment tab22 = new PackShiftFragment();
+                                LocalServicesFragment tab22 = new LocalServicesFragment();
                                 return tab22;
                         case 22:
-                                PackShiftFragment tab23 = new PackShiftFragment();
+                                ProfessionalServicesFragment tab23 = new ProfessionalServicesFragment();
                                 return tab23;
-
                         case 23:
-                                PackShiftFragment tab24 = new PackShiftFragment();
+                                RentalFragment tab24 = new RentalFragment();
                                 return tab24;
 
                         case 24:
-                                PackShiftFragment tab25 = new PackShiftFragment();
+                                RestaurantFragment tab25 = new RestaurantFragment();
                                 return tab25;
 
                         case 25:
-                                PackShiftFragment tab26 = new PackShiftFragment();
+                                ShoppingFragment tab26 = new ShoppingFragment();
                                 return tab26;
 
                         case 26:
-                                PackShiftFragment tab27 = new PackShiftFragment();
+                                TransportationFragment tab27 = new TransportationFragment();
                                 return tab27;
-                        case 27:
-                                TutorFragment tab28 = new TutorFragment();
-                                return tab28;
 
+                        case 27:
+                                TravelFragment tab28 = new TravelFragment();
+                                return tab28;
                         case 28:
-                                WeddingEventsFragment tab29 = new WeddingEventsFragment();
+                                TutorFragment tab29 = new TutorFragment();
                                 return tab29;
+
+                        case 29:
+                                WeddingEventsFragment tab30 = new WeddingEventsFragment();
+                                return tab30;
                         default:
                                 return null;
 

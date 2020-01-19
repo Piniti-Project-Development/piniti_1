@@ -31,7 +31,7 @@
                 android:nestedScrollingEnabled="false" />
 
             <LinearLayout
-                android:id="@+id/linear_mehndi"
+                android:id="@+id/linear_kindergarten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -42,25 +42,25 @@
                 android:paddingBottom="10dp">
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/imageKindergarten"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:src="@drawable/mehendi_artists" />
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/textKindergarten"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="Mehndi Artist"
+                    android:text="Kindergarten"
                     android:textColor="@color/walkthrough_txt"
                     android:textSize="15sp" />
 
                 <ImageView
-                    android:id="@+id/arrow"
+                    android:id="@+id/arrowKindergarten"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:layout_gravity="right|center_vertical"
