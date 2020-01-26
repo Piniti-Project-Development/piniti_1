@@ -1,14 +1,19 @@
 package Adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -49,6 +54,82 @@ public class BookingHistoryRecycleAdapter extends RecyclerView.Adapter<BookingHi
         holder.rate.setText(lists.getRate());
         holder.feedback.setText(lists.getFeedback());
         holder.image.setImageResource(lists.getImage());
+        if(position==0){
+            holder.rate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Dialog myDialog = new Dialog(context);
+                    myDialog.setContentView(R.layout.rate_popup);
+                    ImageView rate1, rate2,rate3,rate4,rate5;
+                    rate1 = myDialog.findViewById(R.id.rate1);
+                    rate2 = myDialog.findViewById(R.id.rate2);
+                    rate3 = myDialog.findViewById(R.id.rate3);
+                    rate4 = myDialog.findViewById(R.id.rate4);
+                    rate5 = myDialog.findViewById(R.id.rate5);
+                    rate1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "You Give Rate 1", Toast.LENGTH_LONG).show();
+                            myDialog.dismiss();
+                        }
+                    });
+                    rate2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "You Give Rate 2", Toast.LENGTH_LONG).show();
+                            myDialog.dismiss();
+                        }
+                    });
+                    rate3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "You Give Rate 3", Toast.LENGTH_LONG).show();
+                            myDialog.dismiss();
+                        }
+                    });
+                    rate4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "You Give Rate 4", Toast.LENGTH_LONG).show();
+                            myDialog.dismiss();
+                        }
+                    });
+                    rate5.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, "You Give Rate 5", Toast.LENGTH_LONG).show();
+                            myDialog.dismiss();
+                        }
+                    });
+
+                    myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    myDialog.show();
+                }
+            });
+            holder.feedback.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Dialog myDialog = new Dialog(context);
+                    myDialog.setContentView(R.layout.feedback_popup);
+                    TextView postButton = myDialog.findViewById(R.id.post_button);
+                    EditText editText = myDialog.findViewById(R.id.edit_text);
+                    postButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(context, editText.getText().toString().trim(), Toast.LENGTH_LONG).show();
+                            myDialog.dismiss();
+                            Dialog fDialog = new Dialog(context);
+                            fDialog.setContentView(R.layout.feedback_popup_display);
+                            fDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                            fDialog.show();
+
+                        }
+                    });
+                    myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    myDialog.show();
+                }
+            });
+        }
         if(position==1){
             holder.accpt.setTextColor(ContextCompat.getColor(context, R.color.red_color));
         }

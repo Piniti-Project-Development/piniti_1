@@ -18,10 +18,11 @@
             android:text="@string/service_provider"/>
 
         <Button
+            android:id="@+id/add_favorite"
             android:layout_width="40dp"
             android:layout_height="25dp"
             android:layout_weight=".5"
-            android:textColor="#4DB6AC"
+            android:textColor="@color/black"
             android:background="@drawable/location_rect"
             android:text="Add"
             android:textAllCaps="false"/>

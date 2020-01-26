@@ -94,6 +94,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/cancel"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -110,6 +111,7 @@
                     android:background="@color/view_line"/>
 
                 <TextView
+                    android:id="@+id/need_help"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
