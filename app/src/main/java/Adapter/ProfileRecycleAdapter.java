@@ -21,6 +21,8 @@ import java.util.List;
 
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.R;
+import bd.piniti.service.activitys.EditProfileActivity;
+import bd.piniti.service.activitys.SettingActivity;
 import bd.piniti.service.location.TermsCondition;
 
 
@@ -35,6 +37,24 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
+        if (position == 0) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(context, EditProfileActivity.class);
+                    context.startActivity(intent1);
+                }
+            });
+        }
+        if (position == 1) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(context, SettingActivity.class);
+                    context.startActivity(intent1);
+                }
+            });
+        }
         if (position == 3) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
