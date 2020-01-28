@@ -137,7 +137,7 @@ public class BeautyFragment extends Fragment {
         t2.players.add("Hair Cut");
         t2.players.add("Hair Color");
         t2.players.add("Regular Waxing");
-        t2.players.add("Beard Trim");
+        t2.players.add("Shaving & Trimming");
 
         Team t3=new Team("Salon for Women");
         t3.players.add("Hair Style");

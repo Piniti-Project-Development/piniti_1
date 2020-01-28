@@ -69,7 +69,7 @@ public class FinancialServicesRecycleAdapter extends RecyclerView.Adapter<Financ
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==2){
+        if (position==1){
 
             holder.linear.setVisibility(View.GONE);
         }else {

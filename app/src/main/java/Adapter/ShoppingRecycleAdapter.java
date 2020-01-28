@@ -73,7 +73,7 @@ public class ShoppingRecycleAdapter extends RecyclerView.Adapter<ShoppingRecycle
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==8){
+        if (position==4){
 
             holder.linear.setVisibility(View.GONE);
         }else {

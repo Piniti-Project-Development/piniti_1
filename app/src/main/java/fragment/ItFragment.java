@@ -28,8 +28,8 @@ public class ItFragment extends Fragment {
 
 
     private  Integer image[] = {R.drawable.blocks_leakages,R.drawable.toilet_and_sanitary_work,R.drawable.bathroom_fitting,
-            R.drawable.water_tank, R.drawable.full_home_health_check};
-    private String title[] = {"Website","Ecommerce","Android App","Software Developer","Game Developer"};
+            R.drawable.water_tank, R.drawable.full_home_health_check,R.drawable.water_tank, R.drawable.full_home_health_check};
+    private String title[] = {"SEO","Website","Ecommerce","Android App","Software Developer","Game Developer","Online Marketing"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

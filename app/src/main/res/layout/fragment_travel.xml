@@ -32,7 +32,7 @@
         android:dividerHeight="0dp"/>
 
             <LinearLayout
-                android:id="@+id/linear_holitour"
+                android:id="@+id/linear_holytour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="17dp"
@@ -43,13 +43,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageHoliTour"
+                    android:id="@+id/imageHolyTour"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:src="@drawable/mehendi_artists" />
 
                 <TextView
-                    android:id="@+id/textHoliTour"
+                    android:id="@+id/textHolyTour"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -57,13 +57,13 @@
                     android:layout_weight="1"
                     android:textSize="15sp"
                     android:layout_gravity="center"
-                    android:text="Holi Tour"
+                    android:text="Holy Tour"
                     android:textColor="@color/walkthrough_txt" />
 
                 <ImageView
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:id="@+id/arrowHoliTour"
+                    android:id="@+id/arrowHolyTour"
                     android:rotation="270"
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
@@ -95,7 +95,7 @@
                     android:layout_weight="1"
                     android:textSize="15sp"
                     android:layout_gravity="center"
-                    android:text="Visa &amp; PassportProcessing"
+                    android:text="Visa &amp; Passport Processing"
                     android:textColor="@color/walkthrough_txt" />
 
                 <ImageView

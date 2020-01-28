@@ -73,7 +73,7 @@ public class ItRecycleAdapter extends RecyclerView.Adapter<ItRecycleAdapter.MyVi
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==4){
+        if (position==6){
 
             holder.linear.setVisibility(View.GONE);
         }else {

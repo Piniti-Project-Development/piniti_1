@@ -36,7 +36,7 @@
             android:fontFamily="@font/roboto_regular"
             android:gravity="center"
             android:letterSpacing="0.0620"
-            android:text="Are you sure you want to cancel this service?"
+            android:text="Are you sure \n you want to cancel this service?"
             android:textColor="@color/green"
             android:textSize="16sp" />
 
@@ -48,7 +48,7 @@
             android:fontFamily="@font/roboto_regular"
             android:gravity="center"
             android:letterSpacing="0.0620"
-            android:text="Please call your service provider for communication at"
+            android:text="Please call your service provider for confirmation at"
             android:textColor="#8f909e"
             android:textSize="11sp" />
         <TextView

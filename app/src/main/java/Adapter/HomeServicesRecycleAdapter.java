@@ -72,7 +72,7 @@ public class HomeServicesRecycleAdapter extends RecyclerView.Adapter<HomeService
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==15){
+        if (position==14){
 
             holder.linear.setVisibility(View.GONE);
         }else {

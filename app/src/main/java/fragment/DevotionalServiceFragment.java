@@ -25,8 +25,8 @@ public class DevotionalServiceFragment extends Fragment {
     private DevotionalServiceRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers};
-    private String title[] = {"All Devotional Services","Devotional Books","Pondit","Devotional Accessories"};
+    private  Integer image[] = {R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers,R.drawable.packers_movers};
+    private String title[] = {"All Devotional Services","Devotional Books","Idol","Temple","Pondit","Devotional Accessories"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

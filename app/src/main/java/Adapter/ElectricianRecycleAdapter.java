@@ -72,7 +72,7 @@ public class ElectricianRecycleAdapter extends RecyclerView.Adapter<ElectricianR
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==9){
+        if (position==14){
 
             holder.linear.setVisibility(View.GONE);
         }else {

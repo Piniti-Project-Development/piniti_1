@@ -73,7 +73,7 @@ public class CleaningRecycleAdapter extends RecyclerView.Adapter<CleaningRecycle
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==4){
+        if (position==5){
 
             holder.linear.setVisibility(View.GONE);
         }else {

@@ -27,6 +27,6 @@
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile3"
         android:enabled="true"
-        android:title="Profile" />
+        android:title="Account" />
 
 </menu>

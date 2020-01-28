@@ -25,7 +25,7 @@ public class TravelFragment extends Fragment {
 
     private View view;
 
-    LinearLayout linear_holitour;
+    LinearLayout linear_holytour;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,8 +34,8 @@ public class TravelFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_travel, container, false);
 
 
-        linear_holitour = view.findViewById(R.id.linear_holitour);
-        linear_holitour.setOnClickListener(new View.OnClickListener() {
+        linear_holytour = view.findViewById(R.id.linear_holytour);
+        linear_holytour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getActivity(),MehndiActivity.class);

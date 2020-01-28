@@ -73,7 +73,7 @@ public class RentalRecycleAdapter extends RecyclerView.Adapter<RentalRecycleAdap
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
-        if (position==5){
+        if (position==4){
 
             holder.linear.setVisibility(View.GONE);
         }else {

@@ -31,9 +31,12 @@ public class ElectricianFragment extends Fragment {
 
     private  Integer image[] = {R.drawable.fans,R.drawable.lights,R.drawable.inverter,
             R.drawable.full_home_health_check1,R.drawable.fans,R.drawable.lights,
-            R.drawable.inverter,R.drawable.fans,R.drawable.lights,R.drawable.inverter,};
-    private String title[] = {"Fan","Lights","Outlets","Panels","Switches","Wiring",
-            "Home Security & Alarms","Cables, Network & Telephone","Lighting","Full Home Health Check"};
+            R.drawable.inverter,R.drawable.fans,R.drawable.lights,R.drawable.inverter,
+            R.drawable.fans,R.drawable.lights,R.drawable.inverter,
+            R.drawable.full_home_health_check1,R.drawable.fans,};
+    private String title[] = {"Exhaust Fans","Celling Fans","Tubelight/Bulb","Doorbell","Outlets","Panels","Switch Board","Fuse","Wiring",
+            "Home Security & Alarms","Cables, Network & Telephone","Lighting","Main Circuit Breaker",
+            "Main Distribution Board","Full Home Health Check"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
