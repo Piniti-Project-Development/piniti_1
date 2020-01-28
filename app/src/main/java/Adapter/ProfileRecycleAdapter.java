@@ -104,6 +104,21 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
                 }
             });
         }
+
+        if(position ==5){
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String shareBody = "Find your local services with the Piniti Service app and make life easier. \nDownload the app from google play store.\nDownload Link: https://play.google.com/store/apps/details?id=bd.piniti.service";
+                    String shareSub = "Piniti Service App";
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                    context.startActivity(Intent.createChooser(sharingIntent, "Share using"));
+                }
+            });
+        }
         if (position == 7) {
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
