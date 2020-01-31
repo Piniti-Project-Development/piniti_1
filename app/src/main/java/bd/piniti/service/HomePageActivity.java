@@ -94,7 +94,7 @@ public class HomePageActivity extends AppCompatActivity {
                 case R.id.navigation_profile:
 
                     city_linear.setVisibility(View.GONE);
-                    title.setText("Profile");
+                    title.setText("Account");
                     fragment = new ProfileFragment();
                     loadFragment(fragment);
 

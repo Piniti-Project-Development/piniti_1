@@ -79,10 +79,6 @@ public class BeautyFragment extends Fragment {
             }
         });
 
-
-
-
-
         return  view;
     }
 
