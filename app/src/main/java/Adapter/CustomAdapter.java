@@ -63,8 +63,8 @@ public class CustomAdapter extends BaseExpandableListAdapter {
         String  child=(String) getChild(groupPos, childPos);
 
         //SET CHILD NAME
-        TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
-        ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
+        TextView nameTv= convertView.findViewById(R.id.textView1);
+        ImageView img= convertView.findViewById(R.id.imageView1);
 
 
 
@@ -180,8 +180,8 @@ public class CustomAdapter extends BaseExpandableListAdapter {
         Team t=(Team) getGroup(groupPosition);
 
         //SET GROUP NAME
-        TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
-        ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
+        TextView nameTv= convertView.findViewById(R.id.textView1);
+        ImageView img= convertView.findViewById(R.id.imageView1);
         LinearLayout linear=convertView.findViewById(R.id.headerlayout);
         LinearLayout linear1=convertView.findViewById(R.id.linear);
 

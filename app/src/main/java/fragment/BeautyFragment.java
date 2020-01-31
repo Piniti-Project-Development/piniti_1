@@ -45,7 +45,7 @@ public class BeautyFragment extends Fragment {
 
 
         //THE EXPANDABLE
-        ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandblelistview);
+        ExpandableListView elv= view.findViewById(R.id.expandblelistview);
         elv.setBackgroundColor(Color.WHITE);
 
 
@@ -83,7 +83,7 @@ public class BeautyFragment extends Fragment {
     }
 
     private void setListViewHeight(ExpandableListView listView, int groupPosition) {
-        ExpandableListAdapter listAdapter = (ExpandableListAdapter) listView.getExpandableListAdapter();
+        ExpandableListAdapter listAdapter = listView.getExpandableListAdapter();
         int totalHeight = 0;
         int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(),
                 View.MeasureSpec.EXACTLY);
