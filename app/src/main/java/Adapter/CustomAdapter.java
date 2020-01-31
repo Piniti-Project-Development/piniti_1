@@ -114,6 +114,27 @@ public class CustomAdapter extends BaseExpandableListAdapter {
             }
         }
 
+        //ASSIGN IMAGES TO PLAYERS ACCORDING TO THEIR NAMES AN TEAMS
+        if(teamName.equals("Salon for Man"))
+        {
+
+            if(child=="Hair Style")
+            {
+                img.setImageResource(R.drawable.waxing) ;
+            }else if(child=="Hair Cut")
+            {
+                img.setImageResource(R.drawable.facial) ;
+            }else if(child=="Hair Color")
+            {
+                img.setImageResource(R.drawable.pedicure)  ;
+            }else if(child=="Regular Waxing")
+            {
+                img.setImageResource(R.drawable.pedicure)   ;
+            }else if(child=="Shaving & Trimming")
+            {
+                img.setImageResource(R.drawable.threading)   ;
+            }
+        }
 
 
 
@@ -198,7 +219,10 @@ public class CustomAdapter extends BaseExpandableListAdapter {
         if(name=="Salon at home for Women")
         {
             img.setImageResource(R.drawable.salon_at_home);
-        }else if(name=="Makeup & Hair Styling")
+        }else if(name=="Salon for Man")
+        {
+            img.setImageResource(R.drawable.salon_man);
+        }else if(name=="Salon for Women")
         {
             img.setImageResource(R.drawable.makeup);
         }
