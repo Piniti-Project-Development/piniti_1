@@ -29,8 +29,8 @@ public class ReviewRatingActivity extends AppCompatActivity {
     CircleProgressView circleProgressView;
 
 
-    private  Integer image[] = {R.drawable.salon_at_home,R.drawable.salon_at_home,R.drawable.salon_at_home,R.drawable.salon_at_home,
-            R.drawable.salon_at_home};
+    private  Integer image[] = {R.drawable.salon_women,R.drawable.salon_women,R.drawable.salon_women,R.drawable.salon_women,
+            R.drawable.salon_women};
     private String title1[] = {"Very Nice Service!","Will Use it Again","Very Nice Service!","Will Use it Again","Very Nice Service!"};
 
     @Override

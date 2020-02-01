@@ -11,29 +11,31 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import Adapter.CleaningRecycleAdapter;
+import Adapter.TrainingRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.R;
 
 
-public class CleaningFragment extends Fragment {
+public class TrainingFragment extends Fragment {
 
-    private View view;
+
 
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
-    private CleaningRecycleAdapter bAdapter;
+    private TrainingRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.home_deep_cleaning,R.drawable.kitchen_deep_cleaning,R.drawable.carpet_cleaning,R.drawable.bathroom_cleaning,
-            R.drawable.sofa_cleaning,R.drawable.sweep_mop};
-    private String title[] = {"Home Deep Cleaning","Kitchen Deep Cleaning","Carpet Cleaning","Bathroom Cleaning","Sofa Cleaning","Sweep & Mop"};
+    private  Integer image[] = {R.drawable.home_painting,R.drawable.office_painting};
+    private String title[] = {"Money Exchange","Banks"};
+
+
+    private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_cleaning, container, false);
+        view = inflater.inflate(R.layout.fragment_training, container, false);
 
          /*category recyclerview code is here*/
 
@@ -48,7 +50,7 @@ public class CleaningFragment extends Fragment {
             HomeCategoryModelClass mycreditList = new HomeCategoryModelClass(image[i],title[i]);
             homeCategoryModelClasses.add(mycreditList);
         }
-        bAdapter = new CleaningRecycleAdapter(getActivity(),homeCategoryModelClasses);
+        bAdapter = new TrainingRecycleAdapter(getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
 
         return  view;

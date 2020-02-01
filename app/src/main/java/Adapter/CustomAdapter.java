@@ -96,21 +96,66 @@ public class CustomAdapter extends BaseExpandableListAdapter {
         if(teamName.equals("Salon at home for Women"))
         {
 
-            if(child=="Regular Waxing")
+            if(child=="Facial")
             {
-                img.setImageResource(R.drawable.waxing) ;
-            }else if(child=="Facial")
-            {
-                img.setImageResource(R.drawable.facial) ;
-            }else if(child=="Pedicure & Manicure")
-            {
-                img.setImageResource(R.drawable.pedicure)  ;
+                img.setImageResource(R.drawable.female_facial) ;
             }else if(child=="Hair")
             {
-                img.setImageResource(R.drawable.pedicure)   ;
+                img.setImageResource(R.drawable.female_hair) ;
             }else if(child=="Threading")
             {
-                img.setImageResource(R.drawable.threading)   ;
+                img.setImageResource(R.drawable.female_threading)  ;
+            }else if(child=="Waxing")
+            {
+                img.setImageResource(R.drawable.female_waxing)   ;
+            }else if(child=="Pedicure & Manicure")
+            {
+                img.setImageResource(R.drawable.female_pedicure)   ;
+            }
+        }
+
+        if(teamName.equals("Salon for Man"))
+        {
+
+            if(child=="Facial")
+            {
+                img.setImageResource(R.drawable.male_facial) ;
+            }else if(child=="Hair")
+            {
+                img.setImageResource(R.drawable.male_hair) ;
+            }else if(child=="Beard")
+            {
+                img.setImageResource(R.drawable.male_beard)  ;
+            }else if(child=="Threading")
+            {
+                img.setImageResource(R.drawable.male_threading)  ;
+            }else if(child=="Waxing")
+            {
+                img.setImageResource(R.drawable.male_waxing)   ;
+            }else if(child=="Pedicure & Manicure")
+            {
+                img.setImageResource(R.drawable.male_pedicure)   ;
+            }
+        }
+
+        if(teamName.equals("Salon for Women"))
+        {
+
+            if(child=="Facial")
+            {
+                img.setImageResource(R.drawable.female_facial) ;
+            }else if(child=="Hair")
+            {
+                img.setImageResource(R.drawable.female_hair) ;
+            }else if(child=="Threading")
+            {
+                img.setImageResource(R.drawable.female_threading)  ;
+            }else if(child=="Waxing")
+            {
+                img.setImageResource(R.drawable.female_waxing)   ;
+            }else if(child=="Pedicure & Manicure")
+            {
+                img.setImageResource(R.drawable.female_pedicure)   ;
             }
         }
 
@@ -197,10 +242,13 @@ public class CustomAdapter extends BaseExpandableListAdapter {
 
         if(name=="Salon at home for Women")
         {
-            img.setImageResource(R.drawable.salon_at_home);
-        }else if(name=="Makeup & Hair Styling")
+            img.setImageResource(R.drawable.salon_home);
+        }else if(name=="Salon for Man")
         {
-            img.setImageResource(R.drawable.makeup);
+            img.setImageResource(R.drawable.salon_man);
+        }else if(name=="Salon for Women")
+        {
+            img.setImageResource(R.drawable.salon_women);
         }
 
         //SET TEAM ROW BACKGROUND COLOR

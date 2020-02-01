@@ -18,7 +18,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:src="@drawable/facial"/>
+        android:src="@drawable/female_facial"/>
 
         <LinearLayout
             android:id="@+id/linear"

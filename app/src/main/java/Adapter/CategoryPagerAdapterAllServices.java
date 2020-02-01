@@ -30,6 +30,7 @@ import fragment.PestControlFragment;
 import fragment.PlumberFragment;
 import fragment.RestaurantFragment;
 import fragment.ShoppingFragment;
+import fragment.TrainingFragment;
 import fragment.TransportationFragment;
 import fragment.TravelFragment;
 import fragment.TutorFragment;
@@ -84,21 +85,27 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                         case 8:
                                 BuySellFragment tab9 = new BuySellFragment();
                                 return tab9;
+
                         case 9:
                                 DeliveryFragment tab10 = new DeliveryFragment();
                                 return tab10;
+
                         case 10:
                                 DesignFragment tab11 = new DesignFragment();
                                 return tab11;
+
                         case 11:
                                 DevotionalServiceFragment tab12 = new DevotionalServiceFragment();
                                 return tab12;
+
                         case 12:
                                 ElectricianFragment tab13 = new ElectricianFragment();
                                 return tab13;
+
                         case 13:
                                 EntertainmentFragment tab14 = new EntertainmentFragment();
                                 return tab14;
+
                         case 14:
                                 FarmAgriFragment tab15 = new FarmAgriFragment();
                                 return tab15;
@@ -122,15 +129,19 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                         case 19:
                                 ItFragment tab20 = new ItFragment();
                                 return tab20;
+
                         case 20:
                                 LaundryFragment tab21 = new LaundryFragment();
                                 return tab21;
+
                         case 21:
                                 LocalServicesFragment tab22 = new LocalServicesFragment();
                                 return tab22;
+
                         case 22:
                                 ProfessionalServicesFragment tab23 = new ProfessionalServicesFragment();
                                 return tab23;
+
                         case 23:
                                 RentalFragment tab24 = new RentalFragment();
                                 return tab24;
@@ -144,19 +155,20 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab26;
 
                         case 26:
-                                TransportationFragment tab27 = new TransportationFragment();
+                                TrainingFragment tab27 = new TrainingFragment();
                                 return tab27;
 
                         case 27:
-                                TravelFragment tab28 = new TravelFragment();
+                                TransportationFragment tab28 = new TransportationFragment();
                                 return tab28;
-                        case 28:
-                                TutorFragment tab29 = new TutorFragment();
-                                return tab29;
 
+                        case 28:
+                                TravelFragment tab29 = new TravelFragment();
+                                return tab29;
                         case 29:
-                                WeddingEventsFragment tab30 = new WeddingEventsFragment();
+                                TutorFragment tab30 = new TutorFragment();
                                 return tab30;
+
                         default:
                                 return null;
 

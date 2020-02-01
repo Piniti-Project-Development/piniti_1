@@ -35,7 +35,7 @@ public class SalonAtHomeWomenOne extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CategoryHorizontalRecycleAdapter bAdapter;
 
-    private Integer image[] = {R.drawable.waxing,R.drawable.facial,R.drawable.pedicure,R.drawable.mehendi,R.drawable.threading};
+    private Integer image[] = {R.drawable.female_waxing,R.drawable.female_facial,R.drawable.female_pedicure,R.drawable.mehendi,R.drawable.female_threading};
     private String title1[] = {"Regular Waxing","Facial","Pedicure & Manicure","Mehndi","Threding"};
 
 

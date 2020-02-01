@@ -23,7 +23,7 @@
         android:id="@+id/imageView1"
         android:layout_width="39dp"
         android:layout_height="39dp"
-        android:src="@drawable/salon_at_home" />
+        android:src="@drawable/salon_women" />
 
     <TextView
         android:id="@+id/textView1"

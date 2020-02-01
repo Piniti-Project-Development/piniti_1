@@ -46,7 +46,7 @@
                     android:id="@+id/imageMakeup"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/mehendi_artists" />
+                    android:src="@drawable/makeup_artist" />
 
                 <TextView
                     android:id="@+id/textMakeup"
@@ -68,6 +68,14 @@
                     android:layout_gravity="right|center_vertical"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
 
             <LinearLayout
                 android:id="@+id/linear_mehndi"
