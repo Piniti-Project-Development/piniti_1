@@ -42,14 +42,9 @@ public class BeautyFragment extends Fragment {
                   startActivity(intent);
             }
         });
-
-
         //THE EXPANDABLE
         ExpandableListView elv= view.findViewById(R.id.expandblelistview);
         elv.setBackgroundColor(Color.WHITE);
-
-
-
 
         final ArrayList<Team> team=getData();
 

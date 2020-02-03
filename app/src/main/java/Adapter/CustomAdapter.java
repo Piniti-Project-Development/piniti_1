@@ -66,8 +66,6 @@ public class CustomAdapter extends BaseExpandableListAdapter {
         TextView nameTv= convertView.findViewById(R.id.textView1);
         ImageView img= convertView.findViewById(R.id.imageView1);
 
-
-
         nameTv.setText(child);
 
         //GET TEAM NAME
@@ -89,8 +87,6 @@ public class CustomAdapter extends BaseExpandableListAdapter {
                 }
             }
         });
-
-
 
         //ASSIGN IMAGES TO PLAYERS ACCORDING TO THEIR NAMES AN TEAMS
         if(teamName.equals("Salon at home for Women"))
@@ -158,9 +154,6 @@ public class CustomAdapter extends BaseExpandableListAdapter {
                 img.setImageResource(R.drawable.female_pedicure)   ;
             }
         }
-
-
-
 
         return convertView;
     }

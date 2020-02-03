@@ -2,9 +2,9 @@ package bd.piniti.service;
 
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,8 +35,8 @@ public class SalonAtHomeWomenOne extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CategoryHorizontalRecycleAdapter bAdapter;
 
-    private Integer image[] = {R.drawable.female_waxing,R.drawable.female_facial,R.drawable.female_pedicure,R.drawable.mehendi,R.drawable.female_threading};
-    private String title1[] = {"Regular Waxing","Facial","Pedicure & Manicure","Mehndi","Threding"};
+    private Integer[] image = {R.drawable.female_waxing, R.drawable.female_facial, R.drawable.female_pedicure, R.drawable.mehendi, R.drawable.female_threading};
+    private String[] title1 = {"Regular Waxing", "Facial", "Pedicure & Manicure", "Mehndi", "Threding"};
 
 
     /*subcategory data is here*/
@@ -46,7 +46,7 @@ public class SalonAtHomeWomenOne extends AppCompatActivity {
     private CategorySubRecycleAdapter Adapter;
 
 
-    private String title2[] = {"Half Arm Waxing","Leg Waxing"};
+    private String[] title2 = {"Half Arm Waxing", "Leg Waxing", "Silver Pack Facial", "Gold Facial"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
