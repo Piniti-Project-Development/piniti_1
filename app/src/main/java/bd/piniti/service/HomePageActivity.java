@@ -151,7 +151,6 @@ public class HomePageActivity extends AppCompatActivity {
         });
         loadFragment(new HomeFragment());
 
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
