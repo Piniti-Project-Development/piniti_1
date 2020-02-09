@@ -88,24 +88,19 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
         if (position == 4) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    holder.itemView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            try {
-                                context.startActivity(new Intent(Intent.ACTION_VIEW,
-                                        Uri.parse("market://details?id=bd.piniti.service")));
-                            } catch (ActivityNotFoundException e) {
-                                context.startActivity(new Intent(Intent.ACTION_VIEW,
-                                        Uri.parse("https://play.google.com/store/apps/details?id=bd.piniti.service")));
-                            }
-                        }
-                    });
+                public void onClick(View view) {
+                    try {
+                        context.startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("market://details?id=bd.piniti.service")));
+                    } catch (ActivityNotFoundException e) {
+                        context.startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://play.google.com/store/apps/details?id=bd.piniti.service")));
+                    }
                 }
             });
         }
 
-        if(position ==5){
+        if(position == 5){
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

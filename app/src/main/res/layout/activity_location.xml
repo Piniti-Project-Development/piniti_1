@@ -139,7 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Detect my Location"
+            android:text="Current Location"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
     </LinearLayout>
@@ -166,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Choose On Map"
+            android:text="Select On Map"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
     </LinearLayout>

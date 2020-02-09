@@ -1,6 +1,5 @@
 package fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -26,13 +25,11 @@ public class HomeFragment extends Fragment {
     private HomeCategoryRecycleAdapter bAdapter, bAdapter2;
 
 
-    private  Integer image[] = {R.drawable.ic_beauty,R.drawable.ic_appliance,R.drawable.ic_home_cleaning,R.drawable.ic_wedding,
-                                R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,R.drawable.ic_plumber};
-    private String title[] = {"Beauty & Spa","Repair","Cleaning","Weddings & Events","Paintings","Pest Control",
-                              "Pack & Shift","Plumber"};
+    private Integer[] image = {R.drawable.ic_beauty, R.drawable.ic_appliance, R.drawable.ic_home_cleaning, R.drawable.ic_wedding,
+            R.drawable.ic_painting, R.drawable.ic_pest_control, R.drawable.ic_movinghome, R.drawable.ic_plumber, R.drawable.ic_more_hori};
+    private String[] title = {"Beauty & Spa", "Repair", "Cleaning", "Weddings & Events", "Paintings", "Pest Control",
+            "Pack & Shift", "Plumber", "More"};
 
-    private Integer imageMore = R.drawable.ic_more_hori;
-    private String titleMore = "More";
 
 
     @Override
@@ -49,13 +46,10 @@ public class HomeFragment extends Fragment {
         recyclerView2 = view.findViewById(R.id.moreview);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(),3);
-        RecyclerView.LayoutManager layoutManager2 = new GridLayoutManager(getActivity(),1);
 
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView2.setLayoutManager(layoutManager2);
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView2.setItemAnimator(new DefaultItemAnimator());
 
         homeCategoryModelClasses = new ArrayList<>();
 
@@ -65,11 +59,6 @@ public class HomeFragment extends Fragment {
         }
         bAdapter = new HomeCategoryRecycleAdapter(getActivity(),homeCategoryModelClasses);
         recyclerView.setAdapter(bAdapter);
-
-        HomeCategoryModelClass mycreditList2 = new HomeCategoryModelClass(imageMore,titleMore);
-        homeCategoryModelClasses.add(mycreditList2);
-        bAdapter2 = new HomeCategoryRecycleAdapter(getActivity(),homeCategoryModelClasses);
-        recyclerView.setAdapter(bAdapter2);
 
         return  view;
     }

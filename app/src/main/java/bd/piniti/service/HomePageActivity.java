@@ -41,6 +41,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 import bd.piniti.service.location.LocationActivity;
+import bd.piniti.service.notification.NotificationActivity;
 import fragment.BookingFragment;
 import fragment.FavoriteFragment;
 import fragment.HomeFragment;
@@ -50,7 +51,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     LinearLayout linear, city_linear;
     TextView title, city;
-    private ImageView search, locationOn, locationOff;
+    private ImageView search, notification, locationOn, locationOff;
     private double latitude, logitude;
     // Declare Database for data fields
     private DatabaseReference databaseUser;
@@ -70,6 +71,8 @@ public class HomePageActivity extends AppCompatActivity {
 
                     city_linear.setVisibility(View.VISIBLE);
                     title.setText("");
+                    search.setVisibility(View.VISIBLE);
+                    notification.setVisibility(View.INVISIBLE);
                     fragment = new HomeFragment();
                     loadFragment(fragment);
                     return true;
@@ -78,6 +81,8 @@ public class HomePageActivity extends AppCompatActivity {
 
                     city_linear.setVisibility(View.GONE);
                     title.setText("My Favorite");
+                    search.setVisibility(View.VISIBLE);
+                    notification.setVisibility(View.INVISIBLE);
                     fragment = new FavoriteFragment();
                     loadFragment(fragment);
 
@@ -86,18 +91,20 @@ public class HomePageActivity extends AppCompatActivity {
 
                     city_linear.setVisibility(View.GONE);
                     title.setText("My Booking");
+                    search.setVisibility(View.VISIBLE);
+                    notification.setVisibility(View.INVISIBLE);
                     fragment = new BookingFragment();
                     loadFragment(fragment);
-
-
                     return true;
+
                 case R.id.navigation_profile:
 
                     city_linear.setVisibility(View.GONE);
                     title.setText("Account");
+                    search.setVisibility(View.INVISIBLE);
+                    notification.setVisibility(View.VISIBLE);
                     fragment = new ProfileFragment();
                     loadFragment(fragment);
-
 
                     return true;
             }
@@ -119,10 +126,11 @@ public class HomePageActivity extends AppCompatActivity {
         // Button Actions for go location page and search
         linear = findViewById(R.id.linear);
         search = findViewById(R.id.search);
+        notification = findViewById(R.id.notification);
         locationOn = findViewById(R.id.location_enable);
         locationOff = findViewById(R.id.location_disable);
 
-        // Here get user id in currentFirebaseUser
+        // Here get user id in current Firebase User
         //  Declare firebase user for get user id
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -224,6 +232,14 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePageActivity.this, SearchingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageActivity.this, NotificationActivity.class);
                 startActivity(intent);
             }
         });
