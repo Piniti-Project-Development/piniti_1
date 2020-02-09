@@ -24,6 +24,7 @@ import bd.piniti.service.R;
 import bd.piniti.service.activitys.EditProfileActivity;
 import bd.piniti.service.activitys.SettingActivity;
 import bd.piniti.service.location.TermsCondition;
+import bd.piniti.service.notification.NotificationActivity;
 
 
 public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAdapter.MyViewHolder> {
@@ -51,6 +52,15 @@ public class ProfileRecycleAdapter extends RecyclerView.Adapter<ProfileRecycleAd
                 @Override
                 public void onClick(View view) {
                     Intent intent1 = new Intent(context, SettingActivity.class);
+                    context.startActivity(intent1);
+                }
+            });
+        }
+        if (position == 2) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(context, NotificationActivity.class);
                     context.startActivity(intent1);
                 }
             });

@@ -17,8 +17,6 @@ import java.util.ArrayList;
 
 import Adapter.ProfileRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
-import bd.piniti.service.AddUserInformations.AddNameActivity;
-import bd.piniti.service.AddUserInformations.UserAddressActivity;
 import bd.piniti.service.AddUserInformations.UserTypeActivity;
 import bd.piniti.service.R;
 
@@ -33,9 +31,9 @@ public class ProfileFragment extends Fragment {
     private RecyclerView recyclerView;
     private ProfileRecycleAdapter bAdapter;
 
-    private Integer image[] = {R.drawable.ic_profile,R.drawable.ic_settings,R.drawable.ic_notifications,R.drawable.ic_help,
-    R.drawable.ic_rate_us,R.drawable.ic_share,R.drawable.ic_about,R.drawable.ic_t_and_c};
-    private String title[] = {"Profile","Settings","Notification","Help","Rate us","Share App","About Piniti Service","Terms & Conditions"};
+    private Integer[] image = {R.drawable.ic_profile, R.drawable.ic_settings, R.drawable.ic_notifications_gray, R.drawable.ic_help,
+            R.drawable.ic_rate_us, R.drawable.ic_share, R.drawable.ic_about, R.drawable.ic_t_and_c};
+    private String[] title = {"Profile", "Settings", "Notification", "Help", "Rate us", "Share App", "About Piniti Service", "Terms & Conditions"};
 
 
     @Override
