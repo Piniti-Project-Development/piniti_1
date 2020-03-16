@@ -55,6 +55,15 @@
                     android:rotation="270"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
+
             <LinearLayout
                 android:id="@+id/linear_Homeopathy"
                 android:layout_width="match_parent"
@@ -94,6 +103,14 @@
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
+
             <ExpandableListView
                 android:id="@+id/expandblelistview"
                 android:layout_width="match_parent"
@@ -108,7 +125,7 @@
                 android:nestedScrollingEnabled="false" />
 
             <LinearLayout
-                android:id="@+id/linear_mehndi"
+                android:id="@+id/linear_pharmacy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -119,13 +136,13 @@
                 android:paddingBottom="10dp">
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/imagePharmacy"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:src="@drawable/mehendi_artists" />
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/textPharmacy"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -145,7 +162,13 @@
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
 
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
 
             <LinearLayout
                 android:id="@+id/linear_Hospital"
@@ -184,6 +207,15 @@
                     android:rotation="270"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
+
             <LinearLayout
                 android:id="@+id/linear_Eye"
                 android:layout_width="match_parent"
@@ -221,6 +253,15 @@
                     android:rotation="270"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
+
             <LinearLayout
                 android:id="@+id/linear_Therapy"
                 android:layout_width="match_parent"
@@ -258,6 +299,15 @@
                     android:rotation="270"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="#e2e2e2"
+                />
+
             <LinearLayout
                 android:id="@+id/linear_pain"
                 android:layout_width="match_parent"
@@ -295,7 +345,6 @@
                     android:rotation="270"
                     android:src="@drawable/ic_down_arrow5" />
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"

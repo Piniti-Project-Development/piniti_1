@@ -107,6 +107,9 @@ public class CustomAdapter extends BaseExpandableListAdapter {
             }else if(child=="Pedicure & Manicure")
             {
                 img.setImageResource(R.drawable.female_pedicure)   ;
+            }else if(child=="Massage")
+            {
+                img.setImageResource(R.drawable.female_massage)   ;
             }
         }
 
@@ -131,6 +134,9 @@ public class CustomAdapter extends BaseExpandableListAdapter {
             }else if(child=="Pedicure & Manicure")
             {
                 img.setImageResource(R.drawable.male_pedicure)   ;
+            }else if(child=="Massage")
+            {
+                img.setImageResource(R.drawable.male_massage)   ;
             }
         }
 
@@ -152,6 +158,9 @@ public class CustomAdapter extends BaseExpandableListAdapter {
             }else if(child=="Pedicure & Manicure")
             {
                 img.setImageResource(R.drawable.female_pedicure)   ;
+            }else if(child=="Massage")
+            {
+                img.setImageResource(R.drawable.female_massage)   ;
             }
         }
 

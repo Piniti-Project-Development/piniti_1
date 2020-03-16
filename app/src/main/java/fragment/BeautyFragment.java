@@ -122,6 +122,7 @@ public class BeautyFragment extends Fragment {
         t1.players.add("Threading");
         t1.players.add("Waxing");
         t1.players.add("Pedicure & Manicure");
+        t1.players.add("Massage");
 
         Team t2=new Team("Salon for Man");
         t2.players.add("Facial");
@@ -130,6 +131,7 @@ public class BeautyFragment extends Fragment {
         t2.players.add("Threading");
         t2.players.add("Waxing");
         t2.players.add("Pedicure & Manicure");
+        t2.players.add("Massage");
 
         Team t3=new Team("Salon for Women");
         t3.players.add("Facial");
@@ -137,7 +139,7 @@ public class BeautyFragment extends Fragment {
         t3.players.add("Threading");
         t3.players.add("Waxing");
         t3.players.add("Pedicure & Manicure");
-
+        t3.players.add("Massage");
 
 
         //  Team t3=new Team("Mehendi Artists");

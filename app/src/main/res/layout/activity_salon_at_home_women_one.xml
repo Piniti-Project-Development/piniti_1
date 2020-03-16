@@ -55,7 +55,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginLeft="10dp"
                         android:fontFamily="@font/roboto_bold"
                         android:text="Service Providers"
                         android:textColor="@color/white"
@@ -66,9 +66,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Select your chosen service provider here or press continue for auto service request"
+                        android:text="Select your service provider here or press continue for auto service request"
                         android:textColor="@color/gray"
-                        android:textSize="8sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView

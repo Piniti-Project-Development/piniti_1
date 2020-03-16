@@ -30,44 +30,6 @@
                 android:groupIndicator="@null"
                 android:nestedScrollingEnabled="false" />
 
-            <LinearLayout
-                android:id="@+id/linear_kindergarten"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="horizontal"
-                android:paddingLeft="17dp"
-                android:paddingTop="10dp"
-                android:paddingRight="17dp"
-                android:paddingBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/imageKindergarten"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:src="@drawable/mehendi_artists" />
-
-                <TextView
-                    android:id="@+id/textKindergarten"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Kindergarten"
-                    android:textColor="@color/walkthrough_txt"
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:id="@+id/arrowKindergarten"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_gravity="right|center_vertical"
-                    android:rotation="270"
-                    android:src="@drawable/ic_down_arrow5" />
-            </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"

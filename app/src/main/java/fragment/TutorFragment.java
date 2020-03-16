@@ -34,14 +34,15 @@ public class TutorFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_tutor, container, false);
 
 
-        linear_kindergarten = view.findViewById(R.id.linear_kindergarten);
-        linear_kindergarten.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MehndiActivity.class);
-                startActivity(intent);
-            }
-        });
+        // ..............removed linear_kindergarten....................
+        //linear_kindergarten = view.findViewById(R.id.linear_kindergarten);
+        //linear_kindergarten.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        Intent intent = new Intent(getActivity(), MehndiActivity.class);
+        //        startActivity(intent);
+         //   }
+        //});
 
 
         //THE EXPANDABLE
@@ -128,45 +129,91 @@ public class TutorFragment extends Fragment {
         t2.players.add("JSC");
         t2.players.add("PSC");
 
-        Team t3 = new Team("English");
-        t3.players.add("Class 12");
-        t3.players.add("Class 11");
-        t3.players.add("Class 10");
-        t3.players.add("Class 9");
-        t3.players.add("Class 8");
-        t3.players.add("Class 7");
-        t3.players.add("Class 6");
-        t3.players.add("Class 5");
+        Team t3 = new Team("Class 12");
+        t3.players.add("Algebra");
+        t3.players.add("Geometry");
+        t3.players.add("Trigonometry");
+        t3.players.add("Calculus");
+        t3.players.add("Biology");
+        t3.players.add("Chemistry");
+        t3.players.add("Physics");
+        t3.players.add("Information Technology");
+        t3.players.add("English");
 
-        Team t4 = new Team("Math");
-        t4.players.add("Class 12");
-        t4.players.add("Class 11");
+        Team t4 = new Team("Class 11");
+        t4.players.add("Algebra");
+        t4.players.add("Geometry");
         t4.players.add("Class 10");
         t4.players.add("Class 9");
         t4.players.add("Class 8");
         t4.players.add("Class 7");
         t4.players.add("Class 6");
-        t4.players.add("Class 5");
+        t4.players.add("English");
 
-        Team t5 = new Team("Science");
-        t5.players.add("Class 12");
-        t5.players.add("Class 11");
+        Team t5 = new Team("Class 10");
+        t5.players.add("Algebra");
+        t5.players.add("Geometry");
         t5.players.add("Class 10");
         t5.players.add("Class 9");
         t5.players.add("Class 8");
         t5.players.add("Class 7");
         t5.players.add("Class 6");
-        t5.players.add("Class 5");
+        t5.players.add("English");
 
-        Team t6 = new Team("Information Technology");
-        t6.players.add("Class 12");
-        t6.players.add("Class 11");
+        Team t6 = new Team("Class 9");
+        t6.players.add("Algebra");
+        t6.players.add("Geometry");
         t6.players.add("Class 10");
         t6.players.add("Class 9");
         t6.players.add("Class 8");
         t6.players.add("Class 7");
         t6.players.add("Class 6");
-        t6.players.add("Class 5");
+        t6.players.add("English");
+
+        Team t7 = new Team("Class 8");
+        t7.players.add("Math");
+        t7.players.add("Science");
+        t7.players.add("English");
+
+        Team t8 = new Team("Class 7");
+        t8.players.add("Math");
+        t8.players.add("Science");
+        t8.players.add("English");
+
+        Team t9 = new Team("Class 6");
+        t9.players.add("Math");
+        t9.players.add("Science");
+        t9.players.add("English");
+
+        Team t10 = new Team("Class 5");
+        t10.players.add("Math");
+        t10.players.add("Science");
+        t10.players.add("English");
+
+        Team t11 = new Team("Class 4");
+        t11.players.add("Math");
+        t11.players.add("Science");
+        t11.players.add("English");
+
+        Team t12 = new Team("Class 3");
+        t12.players.add("Math");
+        t12.players.add("Science");
+        t12.players.add("English");
+
+        Team t13 = new Team("Class 2");
+        t13.players.add("Math");
+        t13.players.add("Science");
+        t13.players.add("English");
+
+        Team t14 = new Team("Class 1");
+        t14.players.add("Math");
+        t14.players.add("Science");
+        t14.players.add("English");
+
+        Team t15 = new Team("Kindergarten");
+        t15.players.add("Math");
+        t15.players.add("Science");
+        t15.players.add("English");
 
         ArrayList<Team> allTeams = new ArrayList<Team>();
         allTeams.add(t1);
@@ -175,6 +222,15 @@ public class TutorFragment extends Fragment {
         allTeams.add(t4);
         allTeams.add(t5);
         allTeams.add(t6);
+        allTeams.add(t7);
+        allTeams.add(t8);
+        allTeams.add(t9);
+        allTeams.add(t10);
+        allTeams.add(t11);
+        allTeams.add(t12);
+        allTeams.add(t13);
+        allTeams.add(t14);
+        allTeams.add(t15);
         // allTeams.add(t3);
 
         return allTeams;
